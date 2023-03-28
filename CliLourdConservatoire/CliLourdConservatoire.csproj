@@ -82,6 +82,9 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="DAL\ConnexionSql.cs" />
+    <Compile Include="DAL\EleveDAO.cs" />
+    <Compile Include="DAL\EmployeDAO.cs" />
+    <Compile Include="DAL\InscriptionDAO.cs" />
     <Compile Include="DAL\ProfDAO.cs" />
     <Compile Include="DAL\SeanceDAO.cs" />
     <Compile Include="Form1.cs">
@@ -90,7 +93,15 @@
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
+    <Compile Include="FormAuthentification.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormAuthentification.Designer.cs">
+      <DependentUpon>FormAuthentification.cs</DependentUpon>
+    </Compile>
     <Compile Include="Model\Eleve.cs" />
+    <Compile Include="Model\Employe.cs" />
+    <Compile Include="Model\Inscription.cs" />
     <Compile Include="Model\Personne.cs" />
     <Compile Include="Model\Prof.cs" />
     <Compile Include="Model\Seance.cs" />
@@ -98,6 +109,9 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormAuthentification.resx">
+      <DependentUpon>FormAuthentification.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

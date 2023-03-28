@@ -17,6 +17,9 @@ namespace CliLourdConservatoire
     {
         private List<Prof> listeProf;
         private List<Seance> listeSeance;
+        private List<Eleve> listeEleve;
+        private Prof selectedProf;
+        private Seance selectedSeance;
         public Form1()
         {
             InitializeComponent();
@@ -55,19 +58,29 @@ namespace CliLourdConservatoire
 
         private void button2_Click(object sender, EventArgs e)
         {
-            Prof selectedProf = (Prof)listBox1.SelectedItem;
+            selectedProf = (Prof)listBox1.SelectedItem;
 
             ProfDAO.DeleteProf(selectedProf);
         }
 
         private void listBox1_DoubleClick(object sender, EventArgs e)
         {
-            Prof selectedProf = (Prof)listBox1.SelectedItem;
+            selectedProf = (Prof)listBox1.SelectedItem;
 
             listeSeance = SeanceDAO.getByIdProf(selectedProf.Id);
 
             listBox2.DataSource = listeSeance;
             listBox2.DisplayMember = "Tranche";
+        }
+
+        private void listBox2_DoubleClick(object sender, EventArgs e)
+        {
+            selectedSeance = (Seance)listBox2.SelectedItem;
+            List<Inscription> inscriptions = InscriptionDAO.getBySeance(selectedSeance);
+
+            listeEleve = EleveDAO.getByInscrptions(inscriptions);
+            listBox3.DataSource = listeEleve;
+            listBox3.DisplayMember ="Email";
         }
     }
 }

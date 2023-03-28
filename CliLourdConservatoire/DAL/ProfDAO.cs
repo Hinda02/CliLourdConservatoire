@@ -105,7 +105,7 @@ namespace CliLourdConservatoire.DAL
 
         public static int GetIdPers(string mail)
         {
-            int id = 999;
+            int id = -1;
 
             connect.openConnection();
 
