@@ -67,7 +67,7 @@ namespace CliLourdConservatoire
             listeSeance = SeanceDAO.getByIdProf(selectedProf.Id);
 
             listBox2.DataSource = listeSeance;
-            listBox2.DisplayMember = "Jour";
+            listBox2.DisplayMember = "Tranche";
         }
     }
 }
