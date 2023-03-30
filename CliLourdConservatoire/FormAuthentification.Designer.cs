@@ -28,43 +28,43 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.button1 = new System.Windows.Forms.Button();
+            this.tbLogin = new System.Windows.Forms.TextBox();
+            this.tbPassword = new System.Windows.Forms.TextBox();
+            this.btnAuthentification = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
-            // textBox1
+            // tbLogin
             // 
-            this.textBox1.Location = new System.Drawing.Point(329, 91);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(100, 22);
-            this.textBox1.TabIndex = 0;
+            this.tbLogin.Location = new System.Drawing.Point(329, 91);
+            this.tbLogin.Name = "tbLogin";
+            this.tbLogin.Size = new System.Drawing.Size(100, 22);
+            this.tbLogin.TabIndex = 0;
             // 
-            // textBox2
+            // tbPassword
             // 
-            this.textBox2.Location = new System.Drawing.Point(329, 145);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(100, 22);
-            this.textBox2.TabIndex = 1;
+            this.tbPassword.Location = new System.Drawing.Point(329, 145);
+            this.tbPassword.Name = "tbPassword";
+            this.tbPassword.Size = new System.Drawing.Size(100, 22);
+            this.tbPassword.TabIndex = 1;
             // 
-            // button1
+            // btnAuthentification
             // 
-            this.button1.Location = new System.Drawing.Point(340, 197);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
-            this.button1.TabIndex = 2;
-            this.button1.Text = "OK";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.btnAuthentification.Location = new System.Drawing.Point(340, 201);
+            this.btnAuthentification.Name = "btnAuthentification";
+            this.btnAuthentification.Size = new System.Drawing.Size(75, 23);
+            this.btnAuthentification.TabIndex = 2;
+            this.btnAuthentification.Text = "OK";
+            this.btnAuthentification.UseVisualStyleBackColor = true;
+            this.btnAuthentification.Click += new System.EventHandler(this.btnAuthentification_Click);
             // 
             // FormAuthentification
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.button1);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.btnAuthentification);
+            this.Controls.Add(this.tbPassword);
+            this.Controls.Add(this.tbLogin);
             this.Name = "FormAuthentification";
             this.Text = "FormAuthentification";
             this.ResumeLayout(false);
@@ -74,8 +74,8 @@
 
         #endregion
 
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.TextBox tbLogin;
+        private System.Windows.Forms.TextBox tbPassword;
+        private System.Windows.Forms.Button btnAuthentification;
     }
 }

@@ -73,5 +73,17 @@ namespace CliLourdConservatoire.DAL
 
             return listeSeances;
         }
+
+        public static void updateSeance(Seance seance)
+        {
+            connect.openConnection();
+
+            MySqlCommand request = connect.reqExec("Update seance set JOUR='" + seance.Jour + "', TRANCHE='" + seance.Tranche + "'where IDPROF=" + seance.IdProf + " and NUMSEANCE="+seance.NumSceance+";");
+              
+
+            connect.nonQueryExec(request);
+
+            connect.closeConnection();
+        }
     }
 }

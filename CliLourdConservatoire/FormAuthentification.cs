@@ -19,10 +19,10 @@ namespace CliLourdConservatoire
             InitializeComponent();
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void btnAuthentification_Click(object sender, EventArgs e)
         {
-            string identifiant = textBox1.Text;
-            string mdp = textBox2.Text;
+            string identifiant = tbLogin.Text;
+            string mdp = tbPassword.Text;
 
             bool result = EmployeDAO.Authentifier(identifiant, mdp);
 
@@ -33,7 +33,14 @@ namespace CliLourdConservatoire
             }
             else
             {
-                MessageBox.Show("Login ou mot de passe incorrects!");
+                string message = "Login ou mot de passe incorrect";
+                string title = "Message d'erreur";
+                MessageBoxButtons buttons = MessageBoxButtons.OK;
+                MessageBox.Show(message, title, buttons, MessageBoxIcon.Warning);
+
+                tbLogin.Clear();
+                tbPassword.Clear();
+                
             }
         }
     }

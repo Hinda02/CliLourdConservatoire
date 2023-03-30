@@ -28,6 +28,7 @@ namespace CliLourdConservatoire
 
             listBox1.DataSource = listeProf;
             listBox1.DisplayMember = "Email";
+
         }
 
         private void Form1_Load(object sender, EventArgs e)
@@ -75,12 +76,23 @@ namespace CliLourdConservatoire
 
         private void listBox2_DoubleClick(object sender, EventArgs e)
         {
-            selectedSeance = (Seance)listBox2.SelectedItem;
             List<Inscription> inscriptions = InscriptionDAO.getBySeance(selectedSeance);
 
             listeEleve = EleveDAO.getByInscrptions(inscriptions);
             listBox3.DataSource = listeEleve;
             listBox3.DisplayMember ="Email";
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            FormModifCours form = new FormModifCours(selectedSeance);
+            form.ShowDialog();
+
+        }
+
+        private void listBox2_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            selectedSeance = (Seance)listBox2.SelectedItem;
         }
     }
 }
