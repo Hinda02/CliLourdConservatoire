@@ -24,7 +24,6 @@ C:\Users\hinda\OneDrive\Documents\CliLourdConservatoire\CliLourdConservatoire\bi
 C:\Users\hinda\OneDrive\Documents\CliLourdConservatoire\CliLourdConservatoire\bin\Debug\System.Runtime.CompilerServices.Unsafe.xml
 C:\Users\hinda\OneDrive\Documents\CliLourdConservatoire\CliLourdConservatoire\obj\Debug\CliLourdConservatoire.csproj.AssemblyReference.cache
 C:\Users\hinda\OneDrive\Documents\CliLourdConservatoire\CliLourdConservatoire\obj\Debug\CliLourdConservatoire.csproj.SuggestedBindingRedirects.cache
-C:\Users\hinda\OneDrive\Documents\CliLourdConservatoire\CliLourdConservatoire\obj\Debug\CliLourdConservatoire.Form1.resources
 C:\Users\hinda\OneDrive\Documents\CliLourdConservatoire\CliLourdConservatoire\obj\Debug\CliLourdConservatoire.Properties.Resources.resources
 C:\Users\hinda\OneDrive\Documents\CliLourdConservatoire\CliLourdConservatoire\obj\Debug\CliLourdConservatoire.csproj.GenerateResource.cache
 C:\Users\hinda\OneDrive\Documents\CliLourdConservatoire\CliLourdConservatoire\obj\Debug\CliLourdConservatoire.csproj.CoreCompileInputs.cache
@@ -33,3 +32,6 @@ C:\Users\hinda\OneDrive\Documents\CliLourdConservatoire\CliLourdConservatoire\ob
 C:\Users\hinda\OneDrive\Documents\CliLourdConservatoire\CliLourdConservatoire\obj\Debug\CliLourdConservatoire.pdb
 C:\Users\hinda\OneDrive\Documents\CliLourdConservatoire\CliLourdConservatoire\obj\Debug\CliLourdConservatoire.FormAuthentification.resources
 C:\Users\hinda\OneDrive\Documents\CliLourdConservatoire\CliLourdConservatoire\obj\Debug\CliLourdConservatoire.FormModifCours.resources
+C:\Users\hinda\OneDrive\Documents\CliLourdConservatoire\CliLourdConservatoire\obj\Debug\CliLourdConservatoire.MainForm.resources
+C:\Users\hinda\OneDrive\Documents\CliLourdConservatoire\CliLourdConservatoire\obj\Debug\CliLourdConservatoire.FormAjoutProf.resources
+C:\Users\hinda\OneDrive\Documents\CliLourdConservatoire\CliLourdConservatoire\obj\Debug\CliLourdConservatoire.FormPaiements.resources

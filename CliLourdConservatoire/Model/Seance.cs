@@ -31,5 +31,14 @@ namespace CliLourdConservatoire.Model
         public string Jour { get => jour; set => jour = value; }
         public int Niveau { get => niveau; set => niveau = value; }
         public int Capacite { get => capacite; set => capacite = value; }
+
+        public string Afficher
+        {
+            get => Convert.ToString(this.NumSceance).PadRight(5 - Convert.ToString(this.NumSceance).Length) 
+                + "\t\t" + this.Jour.PadRight(9 - this.Jour.Length) + "\t\t"
+                + this.Tranche.PadRight(8 - this.Tranche.Length) + "\t\t"
+                + Convert.ToString(this.Niveau).PadRight(2 - Convert.ToString(this.Niveau).Length) + "\t\t"
+                + Convert.ToString(this.Capacite).PadRight(2 - Convert.ToString(this.Capacite).Length);
+        }
     }
 }

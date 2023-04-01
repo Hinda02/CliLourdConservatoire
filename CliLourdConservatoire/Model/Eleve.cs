@@ -23,5 +23,11 @@ namespace CliLourdConservatoire.Model
         }
 
         public int Bourse { get => bourse; set => bourse = value; }
+
+        public override string Afficher
+        {
+            get => Convert.ToString(this.Id).PadRight(4 - Convert.ToString(this.Id).Length) + "\t\t" + base.Afficher;
+        }
+
     }
 }

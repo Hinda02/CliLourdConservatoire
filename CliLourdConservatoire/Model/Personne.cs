@@ -40,5 +40,15 @@ namespace CliLourdConservatoire.Model
         public string Telephone { get => telephone; set => telephone = value; }
         public string Email { get => email; set => email = value; }
         public string Adresse { get => adresse; set => adresse = value; }
+
+        public string Identite
+        {
+            get => Nom + " " + Prenom;
+        }
+
+        public virtual string Afficher
+        {
+            get =>  this.Identite;
+        }
     }
 }

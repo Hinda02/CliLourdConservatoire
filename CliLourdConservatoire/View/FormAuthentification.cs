@@ -28,7 +28,7 @@ namespace CliLourdConservatoire
 
             if (result)
             {
-                Form1 form = new Form1();
+                MainForm form = new MainForm();
                 form.ShowDialog();
             }
             else
@@ -43,5 +43,6 @@ namespace CliLourdConservatoire
                 
             }
         }
+
     }
 }

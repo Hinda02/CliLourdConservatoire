@@ -87,24 +87,38 @@
     <Compile Include="DAL\HeureDAO.cs" />
     <Compile Include="DAL\InscriptionDAO.cs" />
     <Compile Include="DAL\JoursDAO.cs" />
+    <Compile Include="DAL\PayerDAO.cs" />
     <Compile Include="DAL\ProfDAO.cs" />
     <Compile Include="DAL\SeanceDAO.cs" />
-    <Compile Include="Form1.cs">
+    <Compile Include="DAL\TrimestreDAO.cs" />
+    <Compile Include="View\FormAjoutProf.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form1.Designer.cs">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <Compile Include="View\FormAjoutProf.Designer.cs">
+      <DependentUpon>FormAjoutProf.cs</DependentUpon>
     </Compile>
-    <Compile Include="FormAuthentification.cs">
+    <Compile Include="View\FormPaiements.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FormAuthentification.Designer.cs">
+    <Compile Include="View\FormPaiements.Designer.cs">
+      <DependentUpon>FormPaiements.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\MainForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\MainForm.Designer.cs">
+      <DependentUpon>MainForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\FormAuthentification.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\FormAuthentification.Designer.cs">
       <DependentUpon>FormAuthentification.cs</DependentUpon>
     </Compile>
-    <Compile Include="FormModifCours.cs">
+    <Compile Include="View\FormModifCours.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FormModifCours.Designer.cs">
+    <Compile Include="View\FormModifCours.Designer.cs">
       <DependentUpon>FormModifCours.cs</DependentUpon>
     </Compile>
     <Compile Include="Model\Eleve.cs" />
@@ -112,18 +126,26 @@
     <Compile Include="Model\Heure.cs" />
     <Compile Include="Model\Inscription.cs" />
     <Compile Include="Model\Jours.cs" />
+    <Compile Include="Model\Payer.cs" />
     <Compile Include="Model\Personne.cs" />
     <Compile Include="Model\Prof.cs" />
     <Compile Include="Model\Seance.cs" />
+    <Compile Include="Model\Trimestre.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="Form1.resx">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <EmbeddedResource Include="View\FormAjoutProf.resx">
+      <DependentUpon>FormAjoutProf.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FormAuthentification.resx">
+    <EmbeddedResource Include="View\FormPaiements.resx">
+      <DependentUpon>FormPaiements.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\MainForm.resx">
+      <DependentUpon>MainForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\FormAuthentification.resx">
       <DependentUpon>FormAuthentification.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FormModifCours.resx">
+    <EmbeddedResource Include="View\FormModifCours.resx">
       <DependentUpon>FormModifCours.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
@@ -134,6 +156,7 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
@@ -151,7 +174,9 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Controller\" />
-    <Folder Include="View\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\logoMPT.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

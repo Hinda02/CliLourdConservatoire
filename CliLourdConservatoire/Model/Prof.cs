@@ -27,5 +27,11 @@ namespace CliLourdConservatoire.Model
 
         public double Salaire { get => salaire; set => salaire = value; }
         public string Instrument { get => instrument; set => instrument = value; }
+
+        public override string Afficher
+        {
+            get =>  this.Instrument.PadRight(20 - this.Instrument.Length) + "\t\t" + base.Afficher;
+        }
     }
+
 }
