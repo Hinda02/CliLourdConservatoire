@@ -16,7 +16,7 @@ namespace CliLourdConservatoire
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new FormPaiements());
+            Application.Run(new FormAuthentification());
         }
     }
 }

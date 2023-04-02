@@ -7,6 +7,7 @@ using System.Data;
 using System.Drawing;
 using System.Drawing.Drawing2D;
 using System.Linq;
+using System.Reflection;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -59,6 +60,7 @@ namespace CliLourdConservatoire
                 btnPayeT1.BackColor = Color.Green;
                 btnPayeT1.ForeColor = Color.DarkGreen;
                 btnPayeT1.Text = "payé";
+                lblDateT1.Text = paieT1.DatePaiement.ToString("dd/MM/yyyy");
 
                 btnValiderT1.Enabled = false;
             }
@@ -67,6 +69,7 @@ namespace CliLourdConservatoire
                 btnPayeT1.BackColor = Color.Red;
                 btnPayeT1.ForeColor = Color.DarkRed;
                 btnPayeT1.Text = "pas payé";
+                lblDateT1.Text = "";
 
                 btnValiderT1.Enabled = true;
             }
@@ -76,6 +79,7 @@ namespace CliLourdConservatoire
                 btnPayeT2.BackColor = Color.Green;
                 btnPayeT2.ForeColor = Color.DarkGreen;
                 btnPayeT2.Text = "payé";
+                lblDateT2.Text = paieT2.DatePaiement.ToString("dd/MM/yyyy");
 
                 btnValiderT2.Enabled = false;
             }
@@ -84,6 +88,7 @@ namespace CliLourdConservatoire
                 btnPayeT2.BackColor = Color.Red;
                 btnPayeT2.ForeColor = Color.DarkRed;
                 btnPayeT2.Text = "pas payé";
+                lblDateT2.Text = "";
 
                 btnValiderT2.Enabled = true;
             }
@@ -93,6 +98,7 @@ namespace CliLourdConservatoire
                 btnPayeT3.BackColor = Color.Green;
                 btnPayeT3.ForeColor = Color.DarkGreen;
                 btnPayeT3.Text = "payé";
+                lblDateT3.Text = paieT3.DatePaiement.ToString("dd/MM/yyyy");
 
                 btnValiderT3.Enabled = false;
             }
@@ -101,6 +107,7 @@ namespace CliLourdConservatoire
                 btnPayeT3.BackColor = Color.Red;
                 btnPayeT3.ForeColor = Color.DarkRed;
                 btnPayeT3.Text = "pas payé";
+                lblDateT3.Text = "";
 
                 btnValiderT3.Enabled = true;
             }
@@ -116,8 +123,11 @@ namespace CliLourdConservatoire
             }
             else
             {
-                MessageBox.Show("Impossible de valider ce paiement. \nLa date de butoire a été dépassée.", "Attention", MessageBoxButtons.OK);
+                MessageBox.Show("Impossible de valider ce paiement. \nLa date butoire a été dépassée.", "Attention", MessageBoxButtons.OK);
             }
+
+            int index = lbInscription.SelectedIndex;
+            lbInscription.SetSelected(index, true);
         }
 
         private void btnValiderT2_Click(object sender, EventArgs e)
@@ -130,8 +140,11 @@ namespace CliLourdConservatoire
             }
             else
             {
-                MessageBox.Show("Impossible de valider ce paiement. \nLa date de butoire a été dépassée.", "Attention", MessageBoxButtons.OK);
+                MessageBox.Show("Impossible de valider ce paiement. \nLa date butoire a été dépassée.", "Attention", MessageBoxButtons.OK);
             }
+
+            int index = lbInscription.SelectedIndex;
+            lbInscription.SetSelected(index, true);
         }
 
         private void btnValiderT3_Click(object sender, EventArgs e)
@@ -144,8 +157,11 @@ namespace CliLourdConservatoire
             }
             else
             {
-                MessageBox.Show("Impossible de valider ce paiement. \nLa date de butoire a été dépassée.", "Attention", MessageBoxButtons.OK);
+                MessageBox.Show("Impossible de valider ce paiement. \nLa date butoire a été dépassée.", "Attention", MessageBoxButtons.OK);
             }
+
+            int index = lbInscription.SelectedIndex;
+            lbInscription.SetSelected(index, true);
         }
 
         private bool compareDates(DateTime d1)
@@ -156,7 +172,7 @@ namespace CliLourdConservatoire
             int lastyear = date1.Year - 1;
             string date = d1.ToString("MM-dd");
 
-            if(d1.Month > 5)
+            if(d1.Month > 5 && date1.Month < 6)
             {
                 date = date + "-" + lastyear;
             }
