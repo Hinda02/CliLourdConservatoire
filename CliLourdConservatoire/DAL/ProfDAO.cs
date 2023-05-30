@@ -10,7 +10,7 @@ namespace CliLourdConservatoire.DAL
 {
     public class ProfDAO
     {
-        private static ConnexionSql connect = ConnexionSql.getInstance("localhost", "conserv", "root", "");
+        private static ConnexionSql connect = ConnexionSql.getInstance("localhost", "conservatoire", "root", "");
 
         public static List<Prof> getAll()
         {

@@ -1,45 +1,41 @@
 ﻿using CliLourdConservatoire.Model;
-using Google.Protobuf.WellKnownTypes;
 using MySql.Data.MySqlClient;
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Runtime.Remoting.Contexts;
 using System.Text;
 using System.Threading.Tasks;
 
 namespace CliLourdConservatoire.DAL
 {
-    public class EmployeDAO
+    public class InstrumentDAO
     {
         private static ConnexionSql connect = ConnexionSql.getInstance("localhost", "conservatoire", "root", "");
-
-        public static bool Authentifier(string login, string pwd)
+        public static List<Instrument> getAll()
         {
             connect.openConnection();
 
-            MySqlCommand request = connect.reqExec("select * from employe where login = '" + login + "' and pw = '" + pwd + "';");
+            MySqlCommand request = connect.reqExec("select * from instrument;");
 
             MySqlDataReader reader = connect.queryExec(request);
 
-            int id = -1;
+            List<Instrument> listeInstrument = new List<Instrument>();
 
             while (reader.Read())
             {
-                id = (int)reader[0];
+                string libelle = (string)reader[0];
+               
+
+                Instrument instrument = new Instrument(libelle);
+
+                listeInstrument.Add(instrument);
             }
 
             reader.Close();
             connect.closeConnection();
 
-            if (id == -1)
-            {
-                return false;
-            }
-            else
-            {
-                return true;
-            }
-
+            return listeInstrument;
         }
 
     }

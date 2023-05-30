@@ -13,9 +13,9 @@ namespace CliLourdConservatoire.Model
         private int numSeance;
         private string libelle;
         private DateTime datePaiement;
-        private double paye;
+        private int paye;
 
-        public Payer(int idProf, int idEleve, int numSeance, string libelle, DateTime datePaiement, double paye)
+        public Payer(int idProf, int idEleve, int numSeance, string libelle, DateTime datePaiement, int paye)
         {
             this.idProf = idProf;
             this.idEleve = idEleve;
@@ -30,7 +30,7 @@ namespace CliLourdConservatoire.Model
         public int NumSeance { get => numSeance; set => numSeance = value; }
         public string Libelle { get => libelle; set => libelle = value; }
         public DateTime DatePaiement { get => datePaiement; set => datePaiement = value; }
-        public double Paye { get => paye; set => paye = value; }
+        public int Paye { get => paye; set => paye = value; }
 
     }
 

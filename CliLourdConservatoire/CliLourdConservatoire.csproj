@@ -86,16 +86,24 @@
     <Compile Include="DAL\EmployeDAO.cs" />
     <Compile Include="DAL\HeureDAO.cs" />
     <Compile Include="DAL\InscriptionDAO.cs" />
+    <Compile Include="DAL\InstrumentDAO.cs" />
     <Compile Include="DAL\JoursDAO.cs" />
     <Compile Include="DAL\PayerDAO.cs" />
     <Compile Include="DAL\ProfDAO.cs" />
     <Compile Include="DAL\SeanceDAO.cs" />
     <Compile Include="DAL\TrimestreDAO.cs" />
+    <Compile Include="Model\Instrument.cs" />
     <Compile Include="View\FormAjoutProf.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="View\FormAjoutProf.Designer.cs">
       <DependentUpon>FormAjoutProf.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\FormAjoutSeance.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\FormAjoutSeance.Designer.cs">
+      <DependentUpon>FormAjoutSeance.cs</DependentUpon>
     </Compile>
     <Compile Include="View\FormPaiements.cs">
       <SubType>Form</SubType>
@@ -135,6 +143,9 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="View\FormAjoutProf.resx">
       <DependentUpon>FormAjoutProf.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\FormAjoutSeance.resx">
+      <DependentUpon>FormAjoutSeance.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="View\FormPaiements.resx">
       <DependentUpon>FormPaiements.cs</DependentUpon>

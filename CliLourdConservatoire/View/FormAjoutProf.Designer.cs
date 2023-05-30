@@ -32,7 +32,6 @@
             this.btnAbandonner = new System.Windows.Forms.Button();
             this.btnAjouter = new System.Windows.Forms.Button();
             this.tbSalaire = new System.Windows.Forms.TextBox();
-            this.tbMatiere = new System.Windows.Forms.TextBox();
             this.tbAdresse = new System.Windows.Forms.TextBox();
             this.tbMail = new System.Windows.Forms.TextBox();
             this.tbTel = new System.Windows.Forms.TextBox();
@@ -45,16 +44,17 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
+            this.cbMatiere = new System.Windows.Forms.ComboBox();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
             // groupBox1
             // 
             this.groupBox1.BackColor = System.Drawing.SystemColors.Control;
+            this.groupBox1.Controls.Add(this.cbMatiere);
             this.groupBox1.Controls.Add(this.btnAbandonner);
             this.groupBox1.Controls.Add(this.btnAjouter);
             this.groupBox1.Controls.Add(this.tbSalaire);
-            this.groupBox1.Controls.Add(this.tbMatiere);
             this.groupBox1.Controls.Add(this.tbAdresse);
             this.groupBox1.Controls.Add(this.tbMail);
             this.groupBox1.Controls.Add(this.tbTel);
@@ -104,13 +104,6 @@
             this.tbSalaire.Name = "tbSalaire";
             this.tbSalaire.Size = new System.Drawing.Size(243, 32);
             this.tbSalaire.TabIndex = 13;
-            // 
-            // tbMatiere
-            // 
-            this.tbMatiere.Location = new System.Drawing.Point(162, 290);
-            this.tbMatiere.Name = "tbMatiere";
-            this.tbMatiere.Size = new System.Drawing.Size(243, 32);
-            this.tbMatiere.TabIndex = 12;
             // 
             // tbAdresse
             // 
@@ -210,12 +203,20 @@
             this.label1.TabIndex = 0;
             this.label1.Text = "Nom";
             // 
+            // cbMatiere
+            // 
+            this.cbMatiere.FormattingEnabled = true;
+            this.cbMatiere.Location = new System.Drawing.Point(162, 289);
+            this.cbMatiere.Name = "cbMatiere";
+            this.cbMatiere.Size = new System.Drawing.Size(243, 33);
+            this.cbMatiere.TabIndex = 13;
+            // 
             // FormAjoutProf
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.ClientSize = new System.Drawing.Size(498, 527);
+            this.ClientSize = new System.Drawing.Size(503, 527);
             this.Controls.Add(this.groupBox1);
             this.Name = "FormAjoutProf";
             this.Text = "FormAjoutProf";
@@ -229,7 +230,6 @@
 
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.TextBox tbSalaire;
-        private System.Windows.Forms.TextBox tbMatiere;
         private System.Windows.Forms.TextBox tbAdresse;
         private System.Windows.Forms.TextBox tbMail;
         private System.Windows.Forms.TextBox tbTel;
@@ -244,5 +244,6 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button btnAbandonner;
         private System.Windows.Forms.Button btnAjouter;
+        private System.Windows.Forms.ComboBox cbMatiere;
     }
 }

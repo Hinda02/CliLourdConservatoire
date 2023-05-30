@@ -133,23 +133,5 @@ namespace CliLourdConservatoire.DAL
             }
         }
 
-        public MySqlCommand ModifiyCommand(string id, string nom, string prenom, string nationalite)
-        {
-            MySqlCommand mysqlCom = new MySqlCommand("UPDATE auteur SET nom = '" + nom + "', prenom = '" + prenom + "', nationalite = '" + nationalite + "' WHERE num = '" + id + "';", this.mySqlCn);
-            return (mysqlCom);
-        }
-
-        public MySqlCommand DeleteCommand(string id)
-        {
-            MySqlCommand mysqlCom = new MySqlCommand("DELETE FROM auteur WHERE num = '" + id + "';", this.mySqlCn);
-            return (mysqlCom);
-        }
-
-        public MySqlCommand InsertCommand(string nom, string prenom, string nationalite)
-        {
-            MySqlCommand mysqlCom = new MySqlCommand("INSERT INTO auteur (nom, prenom, nationalite) VALUES ('" + nom + "', '" + prenom + "', '" + nationalite + "');", this.mySqlCn);
-            return (mysqlCom);
-        }
-
     }
 }

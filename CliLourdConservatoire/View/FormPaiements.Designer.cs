@@ -30,22 +30,22 @@
         {
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.label7 = new System.Windows.Forms.Label();
+            this.lbInscription = new System.Windows.Forms.ListBox();
+            this.label4 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.lbInscription = new System.Windows.Forms.ListBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.btnValiderT3 = new System.Windows.Forms.Button();
+            this.lblDateT2 = new System.Windows.Forms.Label();
             this.btnValiderT2 = new System.Windows.Forms.Button();
+            this.lblDateT3 = new System.Windows.Forms.Label();
+            this.lblDateT1 = new System.Windows.Forms.Label();
             this.btnValiderT1 = new System.Windows.Forms.Button();
+            this.btnPayeT1 = new System.Windows.Forms.Button();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
             this.btnPayeT3 = new System.Windows.Forms.Button();
             this.btnPayeT2 = new System.Windows.Forms.Button();
-            this.btnPayeT1 = new System.Windows.Forms.Button();
-            this.lblDateT3 = new System.Windows.Forms.Label();
-            this.lblDateT2 = new System.Windows.Forms.Label();
-            this.lblDateT1 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
@@ -79,6 +79,28 @@
             this.label7.TabIndex = 4;
             this.label7.Text = "Date Inscription";
             // 
+            // lbInscription
+            // 
+            this.lbInscription.Font = new System.Drawing.Font("Microsoft YaHei", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbInscription.FormattingEnabled = true;
+            this.lbInscription.ItemHeight = 23;
+            this.lbInscription.Location = new System.Drawing.Point(23, 93);
+            this.lbInscription.Name = "lbInscription";
+            this.lbInscription.Size = new System.Drawing.Size(596, 234);
+            this.lbInscription.TabIndex = 0;
+            this.lbInscription.SelectedIndexChanged += new System.EventHandler(this.lbInscription_SelectedIndexChanged);
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.label4.Location = new System.Drawing.Point(19, 61);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(89, 23);
+            this.label4.TabIndex = 1;
+            this.label4.Text = "Professeur";
+            // 
             // label6
             // 
             this.label6.AutoSize = true;
@@ -100,28 +122,6 @@
             this.label5.Size = new System.Drawing.Size(49, 23);
             this.label5.TabIndex = 2;
             this.label5.Text = "Elève";
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.label4.Location = new System.Drawing.Point(19, 61);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(89, 23);
-            this.label4.TabIndex = 1;
-            this.label4.Text = "Professeur";
-            // 
-            // lbInscription
-            // 
-            this.lbInscription.Font = new System.Drawing.Font("Microsoft YaHei", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbInscription.FormattingEnabled = true;
-            this.lbInscription.ItemHeight = 23;
-            this.lbInscription.Location = new System.Drawing.Point(23, 93);
-            this.lbInscription.Name = "lbInscription";
-            this.lbInscription.Size = new System.Drawing.Size(596, 234);
-            this.lbInscription.TabIndex = 0;
-            this.lbInscription.SelectedIndexChanged += new System.EventHandler(this.lbInscription_SelectedIndexChanged);
             // 
             // groupBox2
             // 
@@ -160,6 +160,17 @@
             this.btnValiderT3.UseVisualStyleBackColor = true;
             this.btnValiderT3.Click += new System.EventHandler(this.btnValiderT3_Click);
             // 
+            // lblDateT2
+            // 
+            this.lblDateT2.AutoSize = true;
+            this.lblDateT2.Font = new System.Drawing.Font("Segoe Print", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblDateT2.ForeColor = System.Drawing.SystemColors.WindowText;
+            this.lblDateT2.Location = new System.Drawing.Point(175, 211);
+            this.lblDateT2.Name = "lblDateT2";
+            this.lblDateT2.Size = new System.Drawing.Size(57, 26);
+            this.lblDateT2.TabIndex = 4;
+            this.lblDateT2.Text = "label5";
+            // 
             // btnValiderT2
             // 
             this.btnValiderT2.Enabled = false;
@@ -173,6 +184,28 @@
             this.btnValiderT2.UseVisualStyleBackColor = true;
             this.btnValiderT2.Click += new System.EventHandler(this.btnValiderT2_Click);
             // 
+            // lblDateT3
+            // 
+            this.lblDateT3.AutoSize = true;
+            this.lblDateT3.Font = new System.Drawing.Font("Segoe Print", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblDateT3.ForeColor = System.Drawing.SystemColors.WindowText;
+            this.lblDateT3.Location = new System.Drawing.Point(175, 316);
+            this.lblDateT3.Name = "lblDateT3";
+            this.lblDateT3.Size = new System.Drawing.Size(57, 26);
+            this.lblDateT3.TabIndex = 5;
+            this.lblDateT3.Text = "label6";
+            // 
+            // lblDateT1
+            // 
+            this.lblDateT1.AutoSize = true;
+            this.lblDateT1.Font = new System.Drawing.Font("Segoe Print", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblDateT1.ForeColor = System.Drawing.SystemColors.WindowText;
+            this.lblDateT1.Location = new System.Drawing.Point(175, 111);
+            this.lblDateT1.Name = "lblDateT1";
+            this.lblDateT1.Size = new System.Drawing.Size(57, 26);
+            this.lblDateT1.TabIndex = 3;
+            this.lblDateT1.Text = "label4";
+            // 
             // btnValiderT1
             // 
             this.btnValiderT1.Enabled = false;
@@ -185,6 +218,40 @@
             this.btnValiderT1.Text = "Valider";
             this.btnValiderT1.UseVisualStyleBackColor = true;
             this.btnValiderT1.Click += new System.EventHandler(this.btnValiderT1_Click);
+            // 
+            // btnPayeT1
+            // 
+            this.btnPayeT1.Enabled = false;
+            this.btnPayeT1.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnPayeT1.ForeColor = System.Drawing.SystemColors.WindowText;
+            this.btnPayeT1.Location = new System.Drawing.Point(162, 62);
+            this.btnPayeT1.Name = "btnPayeT1";
+            this.btnPayeT1.Size = new System.Drawing.Size(109, 32);
+            this.btnPayeT1.TabIndex = 6;
+            this.btnPayeT1.Text = "button1";
+            this.btnPayeT1.UseVisualStyleBackColor = true;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Segoe Script", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(227)))), ((int)(((byte)(127)))), ((int)(((byte)(40)))));
+            this.label2.Location = new System.Drawing.Point(20, 163);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(117, 28);
+            this.label2.TabIndex = 1;
+            this.label2.Text = "Trimestre 2";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Segoe Script", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(227)))), ((int)(((byte)(127)))), ((int)(((byte)(40)))));
+            this.label3.Location = new System.Drawing.Point(20, 266);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(117, 28);
+            this.label3.TabIndex = 2;
+            this.label3.Text = "Trimestre 3";
             // 
             // btnPayeT3
             // 
@@ -209,73 +276,6 @@
             this.btnPayeT2.TabIndex = 7;
             this.btnPayeT2.Text = "button2";
             this.btnPayeT2.UseVisualStyleBackColor = true;
-            // 
-            // btnPayeT1
-            // 
-            this.btnPayeT1.Enabled = false;
-            this.btnPayeT1.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnPayeT1.ForeColor = System.Drawing.SystemColors.WindowText;
-            this.btnPayeT1.Location = new System.Drawing.Point(162, 62);
-            this.btnPayeT1.Name = "btnPayeT1";
-            this.btnPayeT1.Size = new System.Drawing.Size(109, 32);
-            this.btnPayeT1.TabIndex = 6;
-            this.btnPayeT1.Text = "button1";
-            this.btnPayeT1.UseVisualStyleBackColor = true;
-            // 
-            // lblDateT3
-            // 
-            this.lblDateT3.AutoSize = true;
-            this.lblDateT3.Font = new System.Drawing.Font("Segoe Print", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblDateT3.ForeColor = System.Drawing.SystemColors.WindowText;
-            this.lblDateT3.Location = new System.Drawing.Point(175, 316);
-            this.lblDateT3.Name = "lblDateT3";
-            this.lblDateT3.Size = new System.Drawing.Size(57, 26);
-            this.lblDateT3.TabIndex = 5;
-            this.lblDateT3.Text = "label6";
-            // 
-            // lblDateT2
-            // 
-            this.lblDateT2.AutoSize = true;
-            this.lblDateT2.Font = new System.Drawing.Font("Segoe Print", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblDateT2.ForeColor = System.Drawing.SystemColors.WindowText;
-            this.lblDateT2.Location = new System.Drawing.Point(175, 211);
-            this.lblDateT2.Name = "lblDateT2";
-            this.lblDateT2.Size = new System.Drawing.Size(57, 26);
-            this.lblDateT2.TabIndex = 4;
-            this.lblDateT2.Text = "label5";
-            // 
-            // lblDateT1
-            // 
-            this.lblDateT1.AutoSize = true;
-            this.lblDateT1.Font = new System.Drawing.Font("Segoe Print", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblDateT1.ForeColor = System.Drawing.SystemColors.WindowText;
-            this.lblDateT1.Location = new System.Drawing.Point(175, 111);
-            this.lblDateT1.Name = "lblDateT1";
-            this.lblDateT1.Size = new System.Drawing.Size(57, 26);
-            this.lblDateT1.TabIndex = 3;
-            this.lblDateT1.Text = "label4";
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Segoe Script", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(227)))), ((int)(((byte)(127)))), ((int)(((byte)(40)))));
-            this.label3.Location = new System.Drawing.Point(20, 266);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(117, 28);
-            this.label3.TabIndex = 2;
-            this.label3.Text = "Trimestre 3";
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Segoe Script", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(227)))), ((int)(((byte)(127)))), ((int)(((byte)(40)))));
-            this.label2.Location = new System.Drawing.Point(20, 163);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(117, 28);
-            this.label2.TabIndex = 1;
-            this.label2.Text = "Trimestre 2";
             // 
             // label1
             // 

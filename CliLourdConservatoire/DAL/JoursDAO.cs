@@ -11,7 +11,7 @@ namespace CliLourdConservatoire.DAL
     public class JoursDAO
     {
 
-        private static ConnexionSql connect = ConnexionSql.getInstance("localhost", "conserv", "root", "");
+        private static ConnexionSql connect = ConnexionSql.getInstance("localhost", "conservatoire", "root", "");
 
         public static List<Jours> getAll()
         {

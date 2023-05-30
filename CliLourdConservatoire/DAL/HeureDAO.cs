@@ -10,7 +10,7 @@ namespace CliLourdConservatoire.DAL
 {
     public class HeureDAO
     {
-        private static ConnexionSql connect = ConnexionSql.getInstance("localhost", "conserv", "root", "");
+        private static ConnexionSql connect = ConnexionSql.getInstance("localhost", "conservatoire", "root", "");
         public static List<Heure> getAll()
         {
             connect.openConnection();

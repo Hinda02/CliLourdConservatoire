@@ -35,3 +35,4 @@ C:\Users\hinda\OneDrive\Documents\CliLourdConservatoire\CliLourdConservatoire\ob
 C:\Users\hinda\OneDrive\Documents\CliLourdConservatoire\CliLourdConservatoire\obj\Debug\CliLourdConservatoire.MainForm.resources
 C:\Users\hinda\OneDrive\Documents\CliLourdConservatoire\CliLourdConservatoire\obj\Debug\CliLourdConservatoire.FormAjoutProf.resources
 C:\Users\hinda\OneDrive\Documents\CliLourdConservatoire\CliLourdConservatoire\obj\Debug\CliLourdConservatoire.FormPaiements.resources
+C:\Users\hinda\OneDrive\Documents\CliLourdConservatoire\CliLourdConservatoire\obj\Debug\CliLourdConservatoire.View.FormAjoutSeance.resources

@@ -10,7 +10,7 @@ namespace CliLourdConservatoire.DAL
 {
     public class PayerDAO
     {
-        private static ConnexionSql connect = ConnexionSql.getInstance("localhost", "conserv", "root", "");
+        private static ConnexionSql connect = ConnexionSql.getInstance("localhost", "conservatoire", "root", "");
 
         public static Payer getByInscription_Trimestre(Inscription insc, string trim)
         {
@@ -31,7 +31,7 @@ namespace CliLourdConservatoire.DAL
                 int numSeance = (int)reader[2];
                 string libelle = (string)reader[3];
                 DateTime datePaiement = (DateTime)reader[4];
-                double paye = (double)reader[5];
+                int paye = (int)reader[5];
 
                 paiement = new Payer(idProf, idEleve, numSeance, libelle, datePaiement, paye);
 

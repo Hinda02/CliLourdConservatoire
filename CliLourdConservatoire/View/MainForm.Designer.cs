@@ -34,7 +34,10 @@
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.ajoutProfesseurToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.supprimerProfToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.gestionCours = new System.Windows.Forms.ToolStripMenuItem();
+            this.ajouterUnCoursToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.modifierDateCoursToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.gestionDesPaimentsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
@@ -47,7 +50,7 @@
             this.label10 = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
             this.label12 = new System.Windows.Forms.Label();
-            this.gestionDesPaimentsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.button1 = new System.Windows.Forms.Button();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -57,10 +60,11 @@
             this.lbProf.Font = new System.Drawing.Font("Microsoft YaHei UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbProf.FormattingEnabled = true;
             this.lbProf.ItemHeight = 23;
-            this.lbProf.Location = new System.Drawing.Point(53, 144);
+            this.lbProf.Location = new System.Drawing.Point(53, 126);
             this.lbProf.Name = "lbProf";
             this.lbProf.Size = new System.Drawing.Size(831, 188);
             this.lbProf.TabIndex = 0;
+            this.lbProf.SelectedIndexChanged += new System.EventHandler(this.lbProf_SelectedIndexChanged);
             this.lbProf.DoubleClick += new System.EventHandler(this.lbProf_DoubleClick);
             // 
             // lbCours
@@ -69,7 +73,7 @@
             this.lbCours.Font = new System.Drawing.Font("Microsoft YaHei UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbCours.FormattingEnabled = true;
             this.lbCours.ItemHeight = 23;
-            this.lbCours.Location = new System.Drawing.Point(53, 457);
+            this.lbCours.Location = new System.Drawing.Point(53, 407);
             this.lbCours.Name = "lbCours";
             this.lbCours.Size = new System.Drawing.Size(830, 165);
             this.lbCours.TabIndex = 10;
@@ -82,7 +86,7 @@
             this.lbInscrit.Font = new System.Drawing.Font("Microsoft YaHei UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbInscrit.FormattingEnabled = true;
             this.lbInscrit.ItemHeight = 23;
-            this.lbInscrit.Location = new System.Drawing.Point(53, 745);
+            this.lbInscrit.Location = new System.Drawing.Point(53, 664);
             this.lbInscrit.Name = "lbInscrit";
             this.lbInscrit.Size = new System.Drawing.Size(820, 165);
             this.lbInscrit.TabIndex = 11;
@@ -95,7 +99,7 @@
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.ajoutProfesseurToolStripMenuItem,
             this.supprimerProfToolStripMenuItem,
-            this.modifierDateCoursToolStripMenuItem,
+            this.gestionCours,
             this.gestionDesPaimentsToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
@@ -107,7 +111,7 @@
             // 
             this.ajoutProfesseurToolStripMenuItem.Name = "ajoutProfesseurToolStripMenuItem";
             this.ajoutProfesseurToolStripMenuItem.Padding = new System.Windows.Forms.Padding(10, 0, 10, 0);
-            this.ajoutProfesseurToolStripMenuItem.Size = new System.Drawing.Size(222, 26);
+            this.ajoutProfesseurToolStripMenuItem.Size = new System.Drawing.Size(222, 30);
             this.ajoutProfesseurToolStripMenuItem.Text = "Ajouter un professeur";
             this.ajoutProfesseurToolStripMenuItem.Click += new System.EventHandler(this.ajoutProfesseurToolStripMenuItem_Click);
             // 
@@ -115,17 +119,41 @@
             // 
             this.supprimerProfToolStripMenuItem.Name = "supprimerProfToolStripMenuItem";
             this.supprimerProfToolStripMenuItem.Padding = new System.Windows.Forms.Padding(10, 0, 10, 0);
-            this.supprimerProfToolStripMenuItem.Size = new System.Drawing.Size(251, 26);
+            this.supprimerProfToolStripMenuItem.Size = new System.Drawing.Size(251, 30);
             this.supprimerProfToolStripMenuItem.Text = "Supprimer un professeur";
             this.supprimerProfToolStripMenuItem.Click += new System.EventHandler(this.supprimerProfToolStripMenuItem_Click);
+            // 
+            // gestionCours
+            // 
+            this.gestionCours.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.ajouterUnCoursToolStripMenuItem,
+            this.modifierDateCoursToolStripMenuItem});
+            this.gestionCours.Name = "gestionCours";
+            this.gestionCours.Padding = new System.Windows.Forms.Padding(10, 0, 10, 0);
+            this.gestionCours.Size = new System.Drawing.Size(193, 30);
+            this.gestionCours.Text = "Gestion des Cours";
+            // 
+            // ajouterUnCoursToolStripMenuItem
+            // 
+            this.ajouterUnCoursToolStripMenuItem.Name = "ajouterUnCoursToolStripMenuItem";
+            this.ajouterUnCoursToolStripMenuItem.Size = new System.Drawing.Size(254, 26);
+            this.ajouterUnCoursToolStripMenuItem.Text = "Ajouter un Cours";
+            this.ajouterUnCoursToolStripMenuItem.Click += new System.EventHandler(this.ajouterUnCoursToolStripMenuItem_Click);
             // 
             // modifierDateCoursToolStripMenuItem
             // 
             this.modifierDateCoursToolStripMenuItem.Name = "modifierDateCoursToolStripMenuItem";
-            this.modifierDateCoursToolStripMenuItem.Padding = new System.Windows.Forms.Padding(10, 0, 10, 0);
-            this.modifierDateCoursToolStripMenuItem.Size = new System.Drawing.Size(213, 26);
-            this.modifierDateCoursToolStripMenuItem.Text = "Modifier Date Cours";
+            this.modifierDateCoursToolStripMenuItem.Size = new System.Drawing.Size(254, 26);
+            this.modifierDateCoursToolStripMenuItem.Text = "Modifier un Cours";
             this.modifierDateCoursToolStripMenuItem.Click += new System.EventHandler(this.modifierDateCoursToolStripMenuItem_Click);
+            // 
+            // gestionDesPaimentsToolStripMenuItem
+            // 
+            this.gestionDesPaimentsToolStripMenuItem.Name = "gestionDesPaimentsToolStripMenuItem";
+            this.gestionDesPaimentsToolStripMenuItem.Padding = new System.Windows.Forms.Padding(10, 2, 10, 2);
+            this.gestionDesPaimentsToolStripMenuItem.Size = new System.Drawing.Size(127, 30);
+            this.gestionDesPaimentsToolStripMenuItem.Text = "Paiements";
+            this.gestionDesPaimentsToolStripMenuItem.Click += new System.EventHandler(this.gestionDesPaimentsToolStripMenuItem_Click);
             // 
             // label1
             // 
@@ -143,7 +171,7 @@
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Segoe Script", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(93)))), ((int)(((byte)(95)))), ((int)(((byte)(180)))));
-            this.label2.Location = new System.Drawing.Point(49, 378);
+            this.label2.Location = new System.Drawing.Point(52, 348);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(169, 33);
             this.label2.TabIndex = 15;
@@ -154,7 +182,7 @@
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Segoe Script", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(93)))), ((int)(((byte)(95)))), ((int)(((byte)(180)))));
-            this.label3.Location = new System.Drawing.Point(49, 670);
+            this.label3.Location = new System.Drawing.Point(49, 608);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(191, 33);
             this.label3.TabIndex = 16;
@@ -163,7 +191,7 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(52, 122);
+            this.label4.Location = new System.Drawing.Point(52, 104);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(52, 16);
             this.label4.TabIndex = 17;
@@ -172,7 +200,7 @@
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(313, 122);
+            this.label5.Location = new System.Drawing.Point(313, 104);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(72, 16);
             this.label5.TabIndex = 18;
@@ -181,7 +209,7 @@
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(55, 435);
+            this.label6.Location = new System.Drawing.Point(55, 385);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(55, 16);
             this.label6.TabIndex = 19;
@@ -190,7 +218,7 @@
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(225, 435);
+            this.label7.Location = new System.Drawing.Point(225, 385);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(33, 16);
             this.label7.TabIndex = 20;
@@ -199,7 +227,7 @@
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(396, 435);
+            this.label8.Location = new System.Drawing.Point(396, 385);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(57, 16);
             this.label8.TabIndex = 21;
@@ -208,7 +236,7 @@
             // label9
             // 
             this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(557, 435);
+            this.label9.Location = new System.Drawing.Point(557, 385);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(50, 16);
             this.label9.TabIndex = 22;
@@ -217,7 +245,7 @@
             // label10
             // 
             this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(723, 435);
+            this.label10.Location = new System.Drawing.Point(723, 385);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(61, 16);
             this.label10.TabIndex = 23;
@@ -226,7 +254,7 @@
             // label11
             // 
             this.label11.AutoSize = true;
-            this.label11.Location = new System.Drawing.Point(55, 726);
+            this.label11.Location = new System.Drawing.Point(55, 645);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(55, 16);
             this.label11.TabIndex = 24;
@@ -235,26 +263,32 @@
             // label12
             // 
             this.label12.AutoSize = true;
-            this.label12.Location = new System.Drawing.Point(225, 726);
+            this.label12.Location = new System.Drawing.Point(225, 645);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(41, 16);
             this.label12.TabIndex = 25;
             this.label12.Text = "Inscrit";
             // 
-            // gestionDesPaimentsToolStripMenuItem
+            // button1
             // 
-            this.gestionDesPaimentsToolStripMenuItem.Name = "gestionDesPaimentsToolStripMenuItem";
-            this.gestionDesPaimentsToolStripMenuItem.Padding = new System.Windows.Forms.Padding(10, 2, 10, 2);
-            this.gestionDesPaimentsToolStripMenuItem.Size = new System.Drawing.Size(127, 30);
-            this.gestionDesPaimentsToolStripMenuItem.Text = "Paiements";
-            this.gestionDesPaimentsToolStripMenuItem.Click += new System.EventHandler(this.gestionDesPaimentsToolStripMenuItem_Click);
+            this.button1.BackColor = System.Drawing.Color.Coral;
+            this.button1.Font = new System.Drawing.Font("Microsoft YaHei UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.button1.Location = new System.Drawing.Point(833, 54);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(50, 47);
+            this.button1.TabIndex = 26;
+            this.button1.Text = "X";
+            this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.ClientSize = new System.Drawing.Size(928, 948);
+            this.ClientSize = new System.Drawing.Size(928, 866);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.label12);
             this.Controls.Add(this.label11);
             this.Controls.Add(this.label10);
@@ -289,7 +323,7 @@
         private System.Windows.Forms.MenuStrip menuStrip1;
         private System.Windows.Forms.ToolStripMenuItem ajoutProfesseurToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem supprimerProfToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem modifierDateCoursToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem gestionCours;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
@@ -303,6 +337,9 @@
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.ToolStripMenuItem gestionDesPaimentsToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem ajouterUnCoursToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem modifierDateCoursToolStripMenuItem;
+        private System.Windows.Forms.Button button1;
     }
 }
 

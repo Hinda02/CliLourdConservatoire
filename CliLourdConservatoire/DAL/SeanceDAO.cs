@@ -10,7 +10,7 @@ namespace CliLourdConservatoire.DAL
 {
     public class SeanceDAO
     {
-        private static ConnexionSql connect = ConnexionSql.getInstance("localhost", "conserv", "root", "");
+        private static ConnexionSql connect = ConnexionSql.getInstance("localhost", "conservatoire", "root", "");
 
         public static List<Seance> getAll()
         {
@@ -84,6 +84,46 @@ namespace CliLourdConservatoire.DAL
             connect.nonQueryExec(request);
 
             connect.closeConnection();
+        }
+
+        public static void InsertSeance(Seance seance)
+        {
+            connect.openConnection();
+
+            MySqlCommand request = connect.reqExec("Insert into seance (idprof, numseance, tranche, jour, niveau, capacite) values" +
+               "('" + seance.IdProf + "','" + seance.NumSceance + "','"
+                + seance.Tranche + "','" + seance.Jour + "','" + seance.Niveau + "','" + seance.Capacite + "');");
+
+            connect.nonQueryExec(request);
+
+            connect.closeConnection();
+        }
+
+        public static int getLastNumSeance(int idProf)
+        {
+            int numSeance = -1;
+
+            connect.openConnection();
+
+            MySqlCommand request = connect.reqExec("select max(numSeance) from seance where IDPROF = " + idProf + ";");
+
+            MySqlDataReader reader = connect.queryExec(request);
+
+            while (reader.Read())
+            {
+                string s = reader[0].ToString();
+                if (s != "")
+                {
+                    numSeance = (int)reader[0];
+                }
+
+            }
+
+            reader.Close();
+            connect.closeConnection();
+
+            return numSeance;
+
         }
     }
 }

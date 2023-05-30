@@ -1,5 +1,6 @@
 ﻿using CliLourdConservatoire.DAL;
 using CliLourdConservatoire.Model;
+using CliLourdConservatoire.View;
 using MySqlX.XDevAPI;
 using System;
 using System.Collections.Generic;
@@ -20,21 +21,17 @@ namespace CliLourdConservatoire
         private List<Eleve> listeEleve;
         private Prof selectedProf;
         private Seance selectedSeance;
-        public MainForm()
+        private FormAuthentification f;
+        public MainForm(FormAuthentification form)
         {
+
             InitializeComponent();
-            this.Size = new System.Drawing.Size(750, 800);
+
+            this.Size = new System.Drawing.Size(750, 750);
+            
             afficherListeProf();
-
-        }
-
-        private void modifierDateCoursToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-
-            FormModifCours form = new FormModifCours(selectedSeance);
-            form.ShowDialog();
-
-            afficherListeSeance();
+            f = form;
+            f.Hide();
         }
 
         private void lbProf_DoubleClick(object sender, EventArgs e)
@@ -56,6 +53,7 @@ namespace CliLourdConservatoire
         private void lbCours_SelectedIndexChanged(object sender, EventArgs e)
         {
             selectedSeance = (Seance)lbCours.SelectedItem;
+            lbInscrit.DataSource = null;
         }
 
         private void supprimerProfToolStripMenuItem_Click(object sender, EventArgs e)
@@ -93,6 +91,33 @@ namespace CliLourdConservatoire
         {
             FormPaiements form2 = new FormPaiements();
             form2.ShowDialog();
+        }
+
+        private void modifierDateCoursToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FormModifCours form = new FormModifCours(selectedSeance);
+            form.ShowDialog();
+
+            afficherListeSeance();
+        }
+
+        private void ajouterUnCoursToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FormAjoutSeance form3 = new FormAjoutSeance(selectedProf);
+            form3.ShowDialog();
+
+            afficherListeSeance();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            f.Close();
+        }
+
+        private void lbProf_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            lbCours.DataSource = null;
+            lbInscrit.DataSource = null;
         }
     }
 }
