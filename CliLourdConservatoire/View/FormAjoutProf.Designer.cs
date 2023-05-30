@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.cbMatiere = new System.Windows.Forms.ComboBox();
             this.btnAbandonner = new System.Windows.Forms.Button();
             this.btnAjouter = new System.Windows.Forms.Button();
             this.tbSalaire = new System.Windows.Forms.TextBox();
@@ -44,13 +45,14 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.cbMatiere = new System.Windows.Forms.ComboBox();
+            this.label8 = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
             // groupBox1
             // 
             this.groupBox1.BackColor = System.Drawing.SystemColors.Control;
+            this.groupBox1.Controls.Add(this.label8);
             this.groupBox1.Controls.Add(this.cbMatiere);
             this.groupBox1.Controls.Add(this.btnAbandonner);
             this.groupBox1.Controls.Add(this.btnAjouter);
@@ -71,15 +73,23 @@
             this.groupBox1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(93)))), ((int)(((byte)(95)))), ((int)(((byte)(180)))));
             this.groupBox1.Location = new System.Drawing.Point(28, 31);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(442, 473);
+            this.groupBox1.Size = new System.Drawing.Size(442, 550);
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Ajouter Un Professeur";
             // 
+            // cbMatiere
+            // 
+            this.cbMatiere.FormattingEnabled = true;
+            this.cbMatiere.Location = new System.Drawing.Point(162, 289);
+            this.cbMatiere.Name = "cbMatiere";
+            this.cbMatiere.Size = new System.Drawing.Size(243, 33);
+            this.cbMatiere.TabIndex = 13;
+            // 
             // btnAbandonner
             // 
             this.btnAbandonner.BackColor = System.Drawing.Color.LightCoral;
-            this.btnAbandonner.Location = new System.Drawing.Point(153, 418);
+            this.btnAbandonner.Location = new System.Drawing.Point(152, 482);
             this.btnAbandonner.Name = "btnAbandonner";
             this.btnAbandonner.Size = new System.Drawing.Size(126, 33);
             this.btnAbandonner.TabIndex = 15;
@@ -90,7 +100,7 @@
             // btnAjouter
             // 
             this.btnAjouter.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(249)))), ((int)(((byte)(177)))), ((int)(((byte)(114)))));
-            this.btnAjouter.Location = new System.Drawing.Point(294, 418);
+            this.btnAjouter.Location = new System.Drawing.Point(284, 482);
             this.btnAjouter.Name = "btnAjouter";
             this.btnAjouter.Size = new System.Drawing.Size(126, 33);
             this.btnAjouter.TabIndex = 14;
@@ -203,20 +213,21 @@
             this.label1.TabIndex = 0;
             this.label1.Text = "Nom";
             // 
-            // cbMatiere
+            // label8
             // 
-            this.cbMatiere.FormattingEnabled = true;
-            this.cbMatiere.Location = new System.Drawing.Point(162, 289);
-            this.cbMatiere.Name = "cbMatiere";
-            this.cbMatiere.Size = new System.Drawing.Size(243, 33);
-            this.cbMatiere.TabIndex = 13;
+            this.label8.AutoSize = true;
+            this.label8.Location = new System.Drawing.Point(38, 393);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(68, 25);
+            this.label8.TabIndex = 16;
+            this.label8.Text = "Salaire";
             // 
             // FormAjoutProf
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.ClientSize = new System.Drawing.Size(503, 527);
+            this.ClientSize = new System.Drawing.Size(747, 637);
             this.Controls.Add(this.groupBox1);
             this.Name = "FormAjoutProf";
             this.Text = "FormAjoutProf";
@@ -245,5 +256,6 @@
         private System.Windows.Forms.Button btnAbandonner;
         private System.Windows.Forms.Button btnAjouter;
         private System.Windows.Forms.ComboBox cbMatiere;
+        private System.Windows.Forms.Label label8;
     }
 }
