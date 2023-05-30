@@ -47,12 +47,16 @@ namespace CliLourdConservatoire
             string adresse = tbAdresse.Text;
             string instrument = cbMatiere.Text;
             double salaire = Convert.ToDouble(tbSalaire.Text);
+            string login = tbLogin.Text;
+            string mdp = tbMdp.Text;
 
-            Prof p = new Prof(nom, prenom, tel, mail, adresse, instrument, salaire);
+            Prof p = new Prof(nom, prenom, tel, mail, adresse, instrument, salaire, login, mdp);
 
             ProfDAO.InsertProf(p);
 
             this.Close();
         }
+
+        
     }
 }
