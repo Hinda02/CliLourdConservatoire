@@ -5,7 +5,6 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using System.Windows.Forms;
 
 namespace CliLourdConservatoire.DAL
 {
@@ -33,8 +32,10 @@ namespace CliLourdConservatoire.DAL
                 string adresse = (string)reader[5];
                 string instrument = (string)reader[7];
                 double salaire = (double)reader[8];
+                string login = (string)reader[9];
+                string mdp = (string)reader[10];
 
-                Prof prof = new Prof(id, nom, prenom, tel, mail, adresse, instrument, salaire);
+                Prof prof = new Prof(id, nom, prenom, tel, mail, adresse, instrument, salaire, login, mdp);
 
                 listeProfs.Add(prof);
             }
@@ -65,8 +66,10 @@ namespace CliLourdConservatoire.DAL
                 string adresse = (string)reader[5];
                 string instrument = (string)reader[7];
                 double salaire = (double)reader[8];
+                string login = (string)reader[9];
+                string mdp = (string)reader[10];
 
-                prof = new Prof(idProf, nom, prenom, tel, mail, adresse, instrument, salaire);
+                prof = new Prof(idProf, nom, prenom, tel, mail, adresse, instrument, salaire, login, mdp);
 
             }
 
@@ -84,7 +87,7 @@ namespace CliLourdConservatoire.DAL
             connect.openConnection();
 
             MySqlCommand request = connect.reqExec("insert into prof values" +
-                "(" + id + ", '" + newProf.Instrument + "', " + newProf.Salaire + ");");
+                "(" + id + ", '" + newProf.Instrument + "', " + newProf.Salaire + ", '" + newProf.Login + "', '" + newProf.Mdp + "');");
 
             connect.nonQueryExec(request);
 
@@ -95,9 +98,9 @@ namespace CliLourdConservatoire.DAL
         {
             connect.openConnection();
 
-            MySqlCommand request = connect.reqExec("Insert into personne (nom, prenom, tel, mail, adresse, login, mdp) values" +
+            MySqlCommand request = connect.reqExec("Insert into personne (nom, prenom, tel, mail, adresse) values" +
                "('" + newProf.Nom + "','" + newProf.Prenom + "','"
-                + newProf.Telephone + "','" + newProf.Email + "','" + newProf.Adresse + "','" + newProf.Login + "','" + newProf.Mdp + "');");
+                + newProf.Telephone + "','" + newProf.Email + "','" + newProf.Adresse +  "');");
 
             connect.nonQueryExec(request);
             

@@ -45,14 +45,20 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.label8 = new System.Windows.Forms.Label();
+            this.login = new System.Windows.Forms.Label();
+            this.mdp = new System.Windows.Forms.Label();
+            this.tbLogin = new System.Windows.Forms.TextBox();
+            this.tbMdp = new System.Windows.Forms.TextBox();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
             // groupBox1
             // 
             this.groupBox1.BackColor = System.Drawing.SystemColors.Control;
-            this.groupBox1.Controls.Add(this.label8);
+            this.groupBox1.Controls.Add(this.tbMdp);
+            this.groupBox1.Controls.Add(this.tbLogin);
+            this.groupBox1.Controls.Add(this.mdp);
+            this.groupBox1.Controls.Add(this.login);
             this.groupBox1.Controls.Add(this.cbMatiere);
             this.groupBox1.Controls.Add(this.btnAbandonner);
             this.groupBox1.Controls.Add(this.btnAjouter);
@@ -73,7 +79,7 @@
             this.groupBox1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(93)))), ((int)(((byte)(95)))), ((int)(((byte)(180)))));
             this.groupBox1.Location = new System.Drawing.Point(28, 31);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(442, 550);
+            this.groupBox1.Size = new System.Drawing.Size(442, 564);
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Ajouter Un Professeur";
@@ -89,7 +95,7 @@
             // btnAbandonner
             // 
             this.btnAbandonner.BackColor = System.Drawing.Color.LightCoral;
-            this.btnAbandonner.Location = new System.Drawing.Point(152, 482);
+            this.btnAbandonner.Location = new System.Drawing.Point(162, 506);
             this.btnAbandonner.Name = "btnAbandonner";
             this.btnAbandonner.Size = new System.Drawing.Size(126, 33);
             this.btnAbandonner.TabIndex = 15;
@@ -100,7 +106,7 @@
             // btnAjouter
             // 
             this.btnAjouter.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(249)))), ((int)(((byte)(177)))), ((int)(((byte)(114)))));
-            this.btnAjouter.Location = new System.Drawing.Point(284, 482);
+            this.btnAjouter.Location = new System.Drawing.Point(294, 506);
             this.btnAjouter.Name = "btnAjouter";
             this.btnAjouter.Size = new System.Drawing.Size(126, 33);
             this.btnAjouter.TabIndex = 14;
@@ -213,21 +219,44 @@
             this.label1.TabIndex = 0;
             this.label1.Text = "Nom";
             // 
-            // label8
+            // login
             // 
-            this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(38, 393);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(68, 25);
-            this.label8.TabIndex = 16;
-            this.label8.Text = "Salaire";
+            this.login.AutoSize = true;
+            this.login.Location = new System.Drawing.Point(30, 392);
+            this.login.Name = "login";
+            this.login.Size = new System.Drawing.Size(56, 25);
+            this.login.TabIndex = 16;
+            this.login.Text = "Login";
+            // 
+            // mdp
+            // 
+            this.mdp.AutoSize = true;
+            this.mdp.Location = new System.Drawing.Point(30, 440);
+            this.mdp.Name = "mdp";
+            this.mdp.Size = new System.Drawing.Size(118, 25);
+            this.mdp.TabIndex = 17;
+            this.mdp.Text = "Mots de passe";
+            // 
+            // tbLogin
+            // 
+            this.tbLogin.Location = new System.Drawing.Point(162, 385);
+            this.tbLogin.Name = "tbLogin";
+            this.tbLogin.Size = new System.Drawing.Size(243, 32);
+            this.tbLogin.TabIndex = 18;
+            // 
+            // tbMdp
+            // 
+            this.tbMdp.Location = new System.Drawing.Point(162, 433);
+            this.tbMdp.Name = "tbMdp";
+            this.tbMdp.Size = new System.Drawing.Size(243, 32);
+            this.tbMdp.TabIndex = 19;
             // 
             // FormAjoutProf
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.ClientSize = new System.Drawing.Size(747, 637);
+            this.ClientSize = new System.Drawing.Size(537, 637);
             this.Controls.Add(this.groupBox1);
             this.Name = "FormAjoutProf";
             this.Text = "FormAjoutProf";
@@ -256,6 +285,9 @@
         private System.Windows.Forms.Button btnAbandonner;
         private System.Windows.Forms.Button btnAjouter;
         private System.Windows.Forms.ComboBox cbMatiere;
-        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.TextBox tbMdp;
+        private System.Windows.Forms.TextBox tbLogin;
+        private System.Windows.Forms.Label mdp;
+        private System.Windows.Forms.Label login;
     }
 }
