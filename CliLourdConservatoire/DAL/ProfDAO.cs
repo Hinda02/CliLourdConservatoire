@@ -5,6 +5,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 
 namespace CliLourdConservatoire.DAL
 {
@@ -94,12 +95,12 @@ namespace CliLourdConservatoire.DAL
         {
             connect.openConnection();
 
-            MySqlCommand request = connect.reqExec("Insert into personne (nom, prenom, tel, mail, adresse) values" +
+            MySqlCommand request = connect.reqExec("Insert into personne (nom, prenom, tel, mail, adresse, login, mdp) values" +
                "('" + newProf.Nom + "','" + newProf.Prenom + "','"
-                + newProf.Telephone + "','" + newProf.Email + "','" + newProf.Adresse + "');");
+                + newProf.Telephone + "','" + newProf.Email + "','" + newProf.Adresse + "','" + newProf.Login + "','" + newProf.Mdp + "');");
 
             connect.nonQueryExec(request);
-
+            
             connect.closeConnection();
         }
 
