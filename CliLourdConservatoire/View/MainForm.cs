@@ -22,7 +22,7 @@ namespace CliLourdConservatoire
         private Prof selectedProf;
         private Seance selectedSeance;
         private FormAuthentification f;
-        public MainForm(FormAuthentification form)
+        public MainForm()//add back: FormAuthentification form in ()
         {
 
             InitializeComponent();
@@ -30,8 +30,8 @@ namespace CliLourdConservatoire
             this.Size = new System.Drawing.Size(750, 750);
             
             afficherListeProf();
-            f = form;
-            f.Hide();
+            /*f = form;
+            f.Hide();*/
         }
 
         private void lbProf_DoubleClick(object sender, EventArgs e)

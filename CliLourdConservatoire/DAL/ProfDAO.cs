@@ -1,5 +1,6 @@
 ﻿using CliLourdConservatoire.Model;
 using MySql.Data.MySqlClient;
+using Mysqlx.Crud;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -125,7 +126,11 @@ namespace CliLourdConservatoire.DAL
         {
             connect.openConnection();
 
-            MySqlCommand request = connect.reqExec("delete from prof where IDPROF = " + prof.Id + ";");
+            MySqlCommand request = connect.reqExec("delete from payer where IDPROF = " + prof.Id + ";" +
+                                                    "delete from inscription where IDPROF = " + prof.Id + ";" +
+                                                    "delete from seance where IDPROF = " + prof.Id + ";" +
+                                                    "delete from prof where IDPROF = " + prof.Id + ";" +
+                                                    "delete from personne where ID = " + prof.Id + ";");
 
             connect.nonQueryExec(request);
 

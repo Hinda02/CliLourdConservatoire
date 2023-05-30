@@ -28,7 +28,7 @@ namespace CliLourdConservatoire
 
             if (result)
             {
-                MainForm form = new MainForm(this);
+                MainForm form = new MainForm(); // add back : this in ()
                 form.ShowDialog();
             }
             else
