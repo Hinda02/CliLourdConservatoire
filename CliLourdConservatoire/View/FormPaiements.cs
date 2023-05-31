@@ -48,68 +48,85 @@ namespace CliLourdConservatoire
         
         private void lbInscription_SelectedIndexChanged(object sender, EventArgs e)
         {
-            int index = lbInscription.SelectedIndex;
-            selectedInscription = listeGetAll[index];
-
-            paieT1 = PayerController.getByInscription_Trimestre(selectedInscription, "trimestre1");
-            paieT2 = PayerController.getByInscription_Trimestre(selectedInscription, "trimestre2");
-            paieT3 = PayerController.getByInscription_Trimestre(selectedInscription, "trimestre3");
-
-            if (paieT1.DatePaiement.Year != 0001)
+            try
             {
-                btnPayeT1.BackColor = Color.Green;
-                btnPayeT1.ForeColor = Color.DarkGreen;
-                btnPayeT1.Text = "payé";
-                lblDateT1.Text = paieT1.DatePaiement.ToString("dd/MM/yyyy");
+                int index = lbInscription.SelectedIndex;
+                selectedInscription = listeGetAll[index];
 
-                btnValiderT1.Enabled = false;
+
+                paieT1 = PayerController.getByInscription_Trimestre(selectedInscription, "trimestre1");
+                paieT2 = PayerController.getByInscription_Trimestre(selectedInscription, "trimestre2");
+                paieT3 = PayerController.getByInscription_Trimestre(selectedInscription, "trimestre3");
+
+                if ((paieT1 == null) || (paieT2 == null) || (paieT3 == null)){
+                    throw new Exception();
+                }
+
+                if (paieT1.DatePaiement.Year != 0001)
+                {
+                    btnPayeT1.BackColor = Color.Green;
+                    btnPayeT1.ForeColor = Color.DarkGreen;
+                    btnPayeT1.Text = "payé";
+                    lblDateT1.Text = paieT1.DatePaiement.ToString("dd/MM/yyyy");
+
+                    btnValiderT1.Enabled = false;
+                }
+                else
+                {
+                    btnPayeT1.BackColor = Color.Red;
+                    btnPayeT1.ForeColor = Color.DarkRed;
+                    btnPayeT1.Text = "pas payé";
+                    lblDateT1.Text = "";
+
+                    btnValiderT1.Enabled = true;
+                }
+
+                if (paieT2.DatePaiement.Year != 0001)
+                {
+                    btnPayeT2.BackColor = Color.Green;
+                    btnPayeT2.ForeColor = Color.DarkGreen;
+                    btnPayeT2.Text = "payé";
+                    lblDateT2.Text = paieT2.DatePaiement.ToString("dd/MM/yyyy");
+
+                    btnValiderT2.Enabled = false;
+                }
+                else
+                {
+                    btnPayeT2.BackColor = Color.Red;
+                    btnPayeT2.ForeColor = Color.DarkRed;
+                    btnPayeT2.Text = "pas payé";
+                    lblDateT2.Text = "";
+
+                    btnValiderT2.Enabled = true;
+                }
+
+                if (paieT3.DatePaiement.Year != 0001)
+                {
+                    btnPayeT3.BackColor = Color.Green;
+                    btnPayeT3.ForeColor = Color.DarkGreen;
+                    btnPayeT3.Text = "payé";
+                    lblDateT3.Text = paieT3.DatePaiement.ToString("dd/MM/yyyy");
+
+                    btnValiderT3.Enabled = false;
+                }
+                else
+                {
+                    btnPayeT3.BackColor = Color.Red;
+                    btnPayeT3.ForeColor = Color.DarkRed;
+                    btnPayeT3.Text = "pas payé";
+                    lblDateT3.Text = "";
+
+                    btnValiderT3.Enabled = true;
+                }
             }
-            else
+            catch (Exception)
             {
-                btnPayeT1.BackColor = Color.Red;
-                btnPayeT1.ForeColor = Color.DarkRed;
-                btnPayeT1.Text = "pas payé";
-                lblDateT1.Text = "";
+                string message = "Erreur système. \nVeuillez réessayer ultérieurement.";
+                string title = "Message d'erreur";
+                MessageBoxButtons buttons = MessageBoxButtons.OK;
+                MessageBox.Show(message, title, buttons, MessageBoxIcon.Exclamation);
 
-                btnValiderT1.Enabled = true;
-            }
-
-            if (paieT2.DatePaiement.Year != 0001)
-            {
-                btnPayeT2.BackColor = Color.Green;
-                btnPayeT2.ForeColor = Color.DarkGreen;
-                btnPayeT2.Text = "payé";
-                lblDateT2.Text = paieT2.DatePaiement.ToString("dd/MM/yyyy");
-
-                btnValiderT2.Enabled = false;
-            }
-            else
-            {
-                btnPayeT2.BackColor = Color.Red;
-                btnPayeT2.ForeColor = Color.DarkRed;
-                btnPayeT2.Text = "pas payé";
-                lblDateT2.Text = "";
-
-                btnValiderT2.Enabled = true;
-            }
-
-            if (paieT3.DatePaiement.Year != 0001)
-            {
-                btnPayeT3.BackColor = Color.Green;
-                btnPayeT3.ForeColor = Color.DarkGreen;
-                btnPayeT3.Text = "payé";
-                lblDateT3.Text = paieT3.DatePaiement.ToString("dd/MM/yyyy");
-
-                btnValiderT3.Enabled = false;
-            }
-            else
-            {
-                btnPayeT3.BackColor = Color.Red;
-                btnPayeT3.ForeColor = Color.DarkRed;
-                btnPayeT3.Text = "pas payé";
-                lblDateT3.Text = "";
-
-                btnValiderT3.Enabled = true;
+                this.Close();
             }
         }
 

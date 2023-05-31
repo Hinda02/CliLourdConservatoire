@@ -41,6 +41,7 @@ namespace CliLourdConservatoire
 
         private void cbJour_SelectedIndexChanged(object sender, EventArgs e)
         {
+
             cbTranche.DataSource = HeureController.getByJour_Id(cbJour.Text, s.IdProf);
             cbTranche.DisplayMember = "Tranche";
             cbTranche.Text = s.Tranche;

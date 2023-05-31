@@ -40,21 +40,33 @@ namespace CliLourdConservatoire
 
         private void btnAjouter_Click(object sender, EventArgs e)
         {
-            string nom = tbNom.Text;
-            string prenom = tbPrenom.Text;
-            string tel = tbTel.Text;
-            string mail = tbMail.Text;
-            string adresse = tbAdresse.Text;
-            string instrument = cbMatiere.Text;
-            double salaire = Convert.ToDouble(tbSalaire.Text);
-            string login = tbLogin.Text;
-            string mdp = tbMdp.Text;
+            try
+            {
+                string nom = tbNom.Text;
+                string prenom = tbPrenom.Text;
+                string tel = tbTel.Text;
+                string mail = tbMail.Text;
+                string adresse = tbAdresse.Text;
+                string instrument = cbMatiere.Text;
+                double salaire = Convert.ToDouble(tbSalaire.Text);
+                string identifiant = tbLogin.Text;
+                string password = tbMdp.Text;
 
-            Prof p = new Prof(nom, prenom, tel, mail, adresse, instrument, salaire, login, mdp);
+                Prof p = new Prof(nom, prenom, tel, mail, adresse, instrument, salaire, identifiant, password);
 
-            ProfController.InsertProf(p);
+                ProfController.InsertProf(p);
 
-            this.Close();
+                this.Close();
+            }
+            catch (Exception)
+            {
+
+                string message = "Veuillez remplir tous les champs et au bon format.";
+                string title = "Erreur";
+                MessageBoxButtons buttons = MessageBoxButtons.OK;
+                MessageBox.Show(message, title, buttons, MessageBoxIcon.Error);
+            }
+            
         }
 
         

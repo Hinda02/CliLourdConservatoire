@@ -50,39 +50,49 @@ namespace CliLourdConservatoire.View
 
         private void btnAjout_Click(object sender, EventArgs e)
         {
-            int idProf = prof.Id;
-            int numSeance = Convert.ToInt32(tbNumS.Text);
-            string tranche = cbTranche.Text;
-            string jour = cbJour.Text;
-            int niveau = 0;
+            try { 
+                int idProf = prof.Id;
+                int numSeance = Convert.ToInt32(tbNumS.Text);
+                string tranche = cbTranche.Text;
+                string jour = cbJour.Text;
+                int niveau = 0;
 
-            bool check1 = radNiv1.Checked;
-            bool check2 = radNiv2.Checked;
-            bool check3 = radNiv3.Checked;
-            bool check4 = radNiv4.Checked;
+                bool check1 = radNiv1.Checked;
+                bool check2 = radNiv2.Checked;
+                bool check3 = radNiv3.Checked;
+                bool check4 = radNiv4.Checked;
 
-            if (check1)
-            {
-                niveau = Convert.ToInt32(radNiv1.Text);
-            }
-            else if (check2)
-            {
-                niveau = Convert.ToInt32(radNiv2.Text);
-            }
-            else if (check3)
-            {
-                niveau = Convert.ToInt32(radNiv3.Text);
-            }
-            else if (check4)
-            {
-                niveau = Convert.ToInt32(radNiv4.Text);
-            }
+                if (check1)
+                {
+                    niveau = Convert.ToInt32(radNiv1.Text);
+                }
+                else if (check2)
+                {
+                    niveau = Convert.ToInt32(radNiv2.Text);
+                }
+                else if (check3)
+                {
+                    niveau = Convert.ToInt32(radNiv3.Text);
+                }
+                else if (check4)
+                {
+                    niveau = Convert.ToInt32(radNiv4.Text);
+                }
 
-            int capacite = Convert.ToInt32(tbCapacite.Text);
+                int capacite = Convert.ToInt32(tbCapacite.Text);
 
-            Seance seance = new Seance(idProf, numSeance, tranche, jour, niveau, capacite);
-            SeanceController.InsertSeance(seance);
-            this.Close();
+                Seance seance = new Seance(idProf, numSeance, tranche, jour, niveau, capacite);
+                SeanceController.InsertSeance(seance);
+                this.Close();
+            }
+            catch (Exception)
+            {
+
+                string message = "Veuillez remplir tous les champs et au bon format.";
+                string title = "Erreur";
+                MessageBoxButtons buttons = MessageBoxButtons.OK;
+                MessageBox.Show(message, title, buttons, MessageBoxIcon.Error);
+            }
         }
     }
 }

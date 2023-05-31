@@ -12,7 +12,16 @@ namespace CliLourdConservatoire.Controller
     {
         public static bool Authentifier(string login, string pwd)
         {
-           return EmployeDAO.Authentifier(login, pwd);
+            try
+            {
+                return EmployeDAO.Authentifier(login, pwd);
+            }
+            catch (Exception e)
+            {
+
+                throw e;
+            }
+           
         }
 
 

@@ -24,24 +24,40 @@ namespace CliLourdConservatoire
             string identifiant = tbLogin.Text;
             string mdp = tbPassword.Text;
 
-            bool result = EmployeController.Authentifier(identifiant, mdp);
+            try
+            {
+                bool result = EmployeController.Authentifier(identifiant, mdp);
 
-            if (result)
-            {
-                MainForm form = new MainForm(this);
-                form.ShowDialog();
+                if (result)
+                {
+                    MainForm form = new MainForm(this);
+                    form.ShowDialog();
+                }
+                else
+                {
+                    string message = "Login ou mot de passe incorrect";
+                    string title = "Message d'erreur";
+                    MessageBoxButtons buttons = MessageBoxButtons.OK;
+                    MessageBox.Show(message, title, buttons, MessageBoxIcon.Warning);
+
+                    tbLogin.Clear();
+                    tbPassword.Clear();
+
+                }
+
             }
-            else
+            catch (Exception)
             {
-                string message = "Login ou mot de passe incorrect";
+                string message = "Erreur de traitement de votre saisie.";
                 string title = "Message d'erreur";
                 MessageBoxButtons buttons = MessageBoxButtons.OK;
                 MessageBox.Show(message, title, buttons, MessageBoxIcon.Warning);
 
                 tbLogin.Clear();
                 tbPassword.Clear();
-                
+
             }
+
         }
 
     }

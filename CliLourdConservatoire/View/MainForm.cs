@@ -58,11 +58,23 @@ namespace CliLourdConservatoire
 
         private void supprimerProfToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            selectedProf = (Prof)lbProf.SelectedItem;
+            try
+            {
+                selectedProf = (Prof)lbProf.SelectedItem;
 
-            ProfController.DeleteProf(selectedProf);
+                ProfController.DeleteProf(selectedProf);
 
-            afficherListeProf();
+                afficherListeProf();
+            }
+            catch (Exception)
+            {
+
+                string message = "Impossible de supprimer le compte de ce professeur.";
+                string title = "Erreur";
+                MessageBoxButtons buttons = MessageBoxButtons.OK;
+                MessageBox.Show(message, title, buttons, MessageBoxIcon.Error);
+            }
+            
         }
 
         private void ajoutProfesseurToolStripMenuItem_Click(object sender, EventArgs e)
@@ -95,14 +107,34 @@ namespace CliLourdConservatoire
 
         private void modifierDateCoursToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            FormModifCours form = new FormModifCours(selectedSeance);
-            form.ShowDialog();
+            try
+            {
+                if (selectedSeance != null)
+                {
+                    FormModifCours form = new FormModifCours(selectedSeance);
+                    form.ShowDialog();
 
-            afficherListeSeance();
+                    afficherListeSeance();
+                }
+                else
+                {
+                    throw new Exception();
+                }
+            }
+            catch (Exception)
+            {
+
+                string message = "Veuillez selectionner un cours à modifier.";
+                string title = "Erreur";
+                MessageBoxButtons buttons = MessageBoxButtons.OK;
+                MessageBox.Show(message, title, buttons, MessageBoxIcon.Error);
+            }
+            
         }
 
         private void ajouterUnCoursToolStripMenuItem_Click(object sender, EventArgs e)
         {
+            selectedProf = (Prof)lbProf.SelectedItem;
             FormAjoutSeance form3 = new FormAjoutSeance(selectedProf);
             form3.ShowDialog();
 

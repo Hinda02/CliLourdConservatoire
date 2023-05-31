@@ -51,6 +51,7 @@
             this.label11 = new System.Windows.Forms.Label();
             this.label12 = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
+            this.label13 = new System.Windows.Forms.Label();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -282,12 +283,24 @@
             this.button1.UseVisualStyleBackColor = false;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
+            // label13
+            // 
+            this.label13.AutoSize = true;
+            this.label13.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label13.ForeColor = System.Drawing.Color.OrangeRed;
+            this.label13.Location = new System.Drawing.Point(214, 355);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(389, 20);
+            this.label13.TabIndex = 27;
+            this.label13.Text = "(double cliquer sur un prof pour afficher ses cours)";
+            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.ClientSize = new System.Drawing.Size(928, 866);
+            this.Controls.Add(this.label13);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.label12);
             this.Controls.Add(this.label11);
@@ -340,6 +353,7 @@
         private System.Windows.Forms.ToolStripMenuItem ajouterUnCoursToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem modifierDateCoursToolStripMenuItem;
         private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Label label13;
     }
 }
 
