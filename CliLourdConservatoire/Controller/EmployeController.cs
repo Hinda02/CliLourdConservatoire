@@ -1,4 +1,6 @@
-﻿using System;
+﻿using CliLourdConservatoire.DAL;
+using CliLourdConservatoire.Model;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -10,7 +12,7 @@ namespace CliLourdConservatoire.Controller
     {
         public static bool Authentifier(string login, string pwd)
         {
-           return EmployeController.Authentifier(login, pwd);
+           return EmployeDAO.Authentifier(login, pwd);
         }
 
 

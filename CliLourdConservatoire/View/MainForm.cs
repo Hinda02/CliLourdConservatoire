@@ -1,4 +1,4 @@
-﻿using CliLourdConservatoire.DAL;
+﻿using CliLourdConservatoire.Controller;
 using CliLourdConservatoire.Model;
 using CliLourdConservatoire.View;
 using MySqlX.XDevAPI;
@@ -43,9 +43,9 @@ namespace CliLourdConservatoire
 
         private void lbCours_DoubleClick(object sender, EventArgs e)
         {
-            List<Inscription> inscriptions = InscriptionDAO.getBySeance(selectedSeance);
+            List<Inscription> inscriptions = InscriptionController.getBySeance(selectedSeance);
 
-            listeEleve = EleveDAO.getByInscrptions(inscriptions);
+            listeEleve = EleveController.getByInscrptions(inscriptions);
             lbInscrit.DataSource = listeEleve;
             lbInscrit.DisplayMember = "Afficher";
         }
@@ -60,7 +60,7 @@ namespace CliLourdConservatoire
         {
             selectedProf = (Prof)lbProf.SelectedItem;
 
-            ProfDAO.DeleteProf(selectedProf);
+            ProfController.DeleteProf(selectedProf);
 
             afficherListeProf();
         }
@@ -75,14 +75,14 @@ namespace CliLourdConservatoire
 
         private void afficherListeProf()
         {
-            listeProf = ProfDAO.getAll();
+            listeProf = ProfController.getAll();
             lbProf.DataSource = listeProf;
             lbProf.DisplayMember = "Afficher";
         }
 
         private void afficherListeSeance()
         {
-            listeSeance = SeanceDAO.getByIdProf(selectedProf.Id);
+            listeSeance = SeanceController.getByIdProf(selectedProf.Id);
             lbCours.DataSource = listeSeance;
             lbCours.DisplayMember = "Afficher";
         }

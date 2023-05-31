@@ -1,4 +1,4 @@
-﻿using CliLourdConservatoire.DAL;
+﻿using CliLourdConservatoire.Controller;
 using CliLourdConservatoire.Model;
 using MySqlX.XDevAPI.Common;
 using System;
@@ -21,7 +21,7 @@ namespace CliLourdConservatoire
         {
             InitializeComponent();
 
-            instrumentList = InstrumentDAO.getAll();
+            instrumentList = InstrumentController.getAll();
             cbMatiere.DataSource = instrumentList;
             cbMatiere.DisplayMember = "Libelle";
 
@@ -52,7 +52,7 @@ namespace CliLourdConservatoire
 
             Prof p = new Prof(nom, prenom, tel, mail, adresse, instrument, salaire, login, mdp);
 
-            ProfDAO.InsertProf(p);
+            ProfController.InsertProf(p);
 
             this.Close();
         }

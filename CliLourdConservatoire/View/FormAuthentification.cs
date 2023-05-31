@@ -1,4 +1,4 @@
-﻿using CliLourdConservatoire.DAL;
+﻿using CliLourdConservatoire.Controller;
 using Mysqlx.Notice;
 using System;
 using System.Collections.Generic;
@@ -24,7 +24,7 @@ namespace CliLourdConservatoire
             string identifiant = tbLogin.Text;
             string mdp = tbPassword.Text;
 
-            bool result = EmployeDAO.Authentifier(identifiant, mdp);
+            bool result = EmployeController.Authentifier(identifiant, mdp);
 
             if (result)
             {

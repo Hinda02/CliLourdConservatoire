@@ -1,4 +1,4 @@
-﻿using CliLourdConservatoire.DAL;
+﻿using CliLourdConservatoire.Controller;
 using CliLourdConservatoire.Model;
 using System;
 using System.Collections.Generic;
@@ -35,12 +35,12 @@ namespace CliLourdConservatoire
             InitializeComponent();
             this.Size = new Size(900, 400);
 
-            trimestre1 = TrimestreDAO.getByTrimestre("trimestre1");
-            trimestre2 = TrimestreDAO.getByTrimestre("trimestre2");
-            trimestre3 = TrimestreDAO.getByTrimestre("trimestre3");
+            trimestre1 = TrimestreController.getByTrimestre("trimestre1");
+            trimestre2 = TrimestreController.getByTrimestre("trimestre2");
+            trimestre3 = TrimestreController.getByTrimestre("trimestre3");
 
-            listeGetAll = InscriptionDAO.getAll();
-            listeGetAllAffichage = InscriptionDAO.getAllAffichage();
+            listeGetAll = InscriptionController.getAll();
+            listeGetAllAffichage = InscriptionController.getAllAffichage();
             lbInscription.DataSource = listeGetAllAffichage;
             lbInscription.DisplayMember = "Afficher";
 
@@ -51,9 +51,9 @@ namespace CliLourdConservatoire
             int index = lbInscription.SelectedIndex;
             selectedInscription = listeGetAll[index];
 
-            paieT1 = PayerDAO.getByInscription_Trimestre(selectedInscription, "trimestre1");
-            paieT2 = PayerDAO.getByInscription_Trimestre(selectedInscription, "trimestre2");
-            paieT3 = PayerDAO.getByInscription_Trimestre(selectedInscription, "trimestre3");
+            paieT1 = PayerController.getByInscription_Trimestre(selectedInscription, "trimestre1");
+            paieT2 = PayerController.getByInscription_Trimestre(selectedInscription, "trimestre2");
+            paieT3 = PayerController.getByInscription_Trimestre(selectedInscription, "trimestre3");
 
             if (paieT1.DatePaiement.Year != 0001)
             {
@@ -119,7 +119,7 @@ namespace CliLourdConservatoire
 
             if (res)
             {
-                PayerDAO.updateDatePaiement(paieT1);
+                PayerController.updateDatePaiement(paieT1);
             }
             else
             {
@@ -136,7 +136,7 @@ namespace CliLourdConservatoire
 
             if (res)
             {
-                PayerDAO.updateDatePaiement(paieT2);
+                PayerController.updateDatePaiement(paieT2);
             }
             else
             {
@@ -153,7 +153,7 @@ namespace CliLourdConservatoire
 
             if (res)
             {
-                PayerDAO.updateDatePaiement(paieT3);
+                PayerController.updateDatePaiement(paieT3);
             }
             else
             {

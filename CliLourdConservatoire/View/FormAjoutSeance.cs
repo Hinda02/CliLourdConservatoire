@@ -1,4 +1,4 @@
-﻿using CliLourdConservatoire.DAL;
+﻿using CliLourdConservatoire.Controller;
 using CliLourdConservatoire.Model;
 using System;
 using System.Collections.Generic;
@@ -24,7 +24,7 @@ namespace CliLourdConservatoire.View
             tbMatiere.Text = prof.Instrument;
             tbProf.Text = prof.Identite;
 
-            int numS = SeanceDAO.getLastNumSeance(prof.Id);
+            int numS = SeanceController.getLastNumSeance(prof.Id);
             if (numS != -1)
             {
                 tbNumS.Text = (numS+1).ToString();
@@ -34,17 +34,17 @@ namespace CliLourdConservatoire.View
                 tbNumS.Text = "1";
             }
 
-            cbJour.DataSource = JoursDAO.getAll();
+            cbJour.DataSource = JourController.getAll();
             cbJour.DisplayMember = "Jour";
 
-            cbTranche.DataSource = HeureDAO.getAll();
+            cbTranche.DataSource = HeureController.getAll();
             cbTranche.DisplayMember = "Tranche";
 
         }
 
         private void cbJour_SelectedIndexChanged(object sender, EventArgs e)
         {
-            cbTranche.DataSource = HeureDAO.getByJour_Id(cbJour.Text, prof.Id);
+            cbTranche.DataSource = HeureController.getByJour_Id(cbJour.Text, prof.Id);
             cbTranche.DisplayMember = "Tranche";
         }
 
@@ -81,7 +81,7 @@ namespace CliLourdConservatoire.View
             int capacite = Convert.ToInt32(tbCapacite.Text);
 
             Seance seance = new Seance(idProf, numSeance, tranche, jour, niveau, capacite);
-            SeanceDAO.InsertSeance(seance);
+            SeanceController.InsertSeance(seance);
             this.Close();
         }
     }
