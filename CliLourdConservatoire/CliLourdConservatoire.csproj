@@ -81,6 +81,16 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Controller\EleveController.cs" />
+    <Compile Include="Controller\EmployeController.cs" />
+    <Compile Include="Controller\HeureController.cs" />
+    <Compile Include="Controller\InscriptionController.cs" />
+    <Compile Include="Controller\InstrumentController.cs" />
+    <Compile Include="Controller\JourController.cs" />
+    <Compile Include="Controller\PayerController.cs" />
+    <Compile Include="Controller\ProfController.cs" />
+    <Compile Include="Controller\SeanceController.cs" />
+    <Compile Include="Controller\TrimestreController.cs" />
     <Compile Include="DAL\ConnexionSql.cs" />
     <Compile Include="DAL\EleveDAO.cs" />
     <Compile Include="DAL\EmployeDAO.cs" />
@@ -183,9 +193,7 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Controller\" />
-  </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <None Include="Resources\logoMPT.png" />
   </ItemGroup>
