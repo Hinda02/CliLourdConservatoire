@@ -23,7 +23,7 @@ namespace CliLourdConservatoire.Controller
 
         public static void updateSeance(Seance seance)
         {
-            return SeanceDAO.updateSeance(seance);
+            SeanceDAO.updateSeance(seance);
         }
 
         public static void InsertSeance(Seance seance)

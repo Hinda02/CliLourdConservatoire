@@ -1,14 +1,14 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\mammo\\source\\repos\\CliLourdConservatoire\\TestConservatoire\\TestConservatoire.csproj": {}
+    "C:\\Users\\hinda\\OneDrive\\Documents\\CliLourdConservatoire\\TestConservatoire\\TestConservatoire.csproj": {}
   },
   "projects": {
-    "C:\\Users\\mammo\\source\\repos\\CliLourdConservatoire\\CliLourdConservatoire\\CliLourdConservatoire.csproj": {
+    "C:\\Users\\hinda\\OneDrive\\Documents\\CliLourdConservatoire\\CliLourdConservatoire\\CliLourdConservatoire.csproj": {
       "restore": {
-        "projectUniqueName": "C:\\Users\\mammo\\source\\repos\\CliLourdConservatoire\\CliLourdConservatoire\\CliLourdConservatoire.csproj",
+        "projectUniqueName": "C:\\Users\\hinda\\OneDrive\\Documents\\CliLourdConservatoire\\CliLourdConservatoire\\CliLourdConservatoire.csproj",
         "projectName": "CliLourdConservatoire",
-        "projectPath": "C:\\Users\\mammo\\source\\repos\\CliLourdConservatoire\\CliLourdConservatoire\\CliLourdConservatoire.csproj",
+        "projectPath": "C:\\Users\\hinda\\OneDrive\\Documents\\CliLourdConservatoire\\CliLourdConservatoire\\CliLourdConservatoire.csproj",
         "frameworks": {
           "net472": {
             "projectReferences": {}
@@ -19,17 +19,21 @@
         "net472": {}
       }
     },
-    "C:\\Users\\mammo\\source\\repos\\CliLourdConservatoire\\TestConservatoire\\TestConservatoire.csproj": {
+    "C:\\Users\\hinda\\OneDrive\\Documents\\CliLourdConservatoire\\TestConservatoire\\TestConservatoire.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\mammo\\source\\repos\\CliLourdConservatoire\\TestConservatoire\\TestConservatoire.csproj",
+        "projectUniqueName": "C:\\Users\\hinda\\OneDrive\\Documents\\CliLourdConservatoire\\TestConservatoire\\TestConservatoire.csproj",
         "projectName": "TestConservatoire",
-        "projectPath": "C:\\Users\\mammo\\source\\repos\\CliLourdConservatoire\\TestConservatoire\\TestConservatoire.csproj",
-        "packagesPath": "C:\\Users\\mammo\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\mammo\\source\\repos\\CliLourdConservatoire\\TestConservatoire\\obj\\",
+        "projectPath": "C:\\Users\\hinda\\OneDrive\\Documents\\CliLourdConservatoire\\TestConservatoire\\TestConservatoire.csproj",
+        "packagesPath": "C:\\Users\\hinda\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\hinda\\OneDrive\\Documents\\CliLourdConservatoire\\TestConservatoire\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
         "configFilePaths": [
-          "C:\\Users\\mammo\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\hinda\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -43,8 +47,8 @@
           "net6.0": {
             "targetAlias": "net6.0",
             "projectReferences": {
-              "C:\\Users\\mammo\\source\\repos\\CliLourdConservatoire\\CliLourdConservatoire\\CliLourdConservatoire.csproj": {
-                "projectPath": "C:\\Users\\mammo\\source\\repos\\CliLourdConservatoire\\CliLourdConservatoire\\CliLourdConservatoire.csproj"
+              "C:\\Users\\hinda\\OneDrive\\Documents\\CliLourdConservatoire\\CliLourdConservatoire\\CliLourdConservatoire.csproj": {
+                "projectPath": "C:\\Users\\hinda\\OneDrive\\Documents\\CliLourdConservatoire\\CliLourdConservatoire\\CliLourdConservatoire.csproj"
               }
             }
           }
@@ -98,7 +102,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.202\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.400\\RuntimeIdentifierGraph.json"
         }
       }
     }

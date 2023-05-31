@@ -115,7 +115,7 @@ namespace CliLourdConservatoire
 
         private void btnValiderT1_Click(object sender, EventArgs e)
         {
-            bool res = compareDates(trimestre1.DateFin);
+            bool res = Trimestre.compareDates(trimestre1.DateFin);
 
             if (res)
             {
@@ -132,7 +132,7 @@ namespace CliLourdConservatoire
 
         private void btnValiderT2_Click(object sender, EventArgs e)
         {
-            bool res = compareDates(trimestre2.DateFin);
+            bool res = Trimestre.compareDates(trimestre2.DateFin);
 
             if (res)
             {
@@ -149,7 +149,7 @@ namespace CliLourdConservatoire
 
         private void btnValiderT3_Click(object sender, EventArgs e)
         {
-            bool res = compareDates(trimestre3.DateFin);
+            bool res = Trimestre.compareDates(trimestre3.DateFin);
 
             if (res)
             {
@@ -164,7 +164,7 @@ namespace CliLourdConservatoire
             lbInscription.SetSelected(index, true);
         }
 
-        private bool compareDates(DateTime d1)
+        /*public bool compareDates(DateTime d1)
         {
             bool result;
 
@@ -191,6 +191,6 @@ namespace CliLourdConservatoire
             }
 
             return result;
-        }
+        }*/
     }
 }
