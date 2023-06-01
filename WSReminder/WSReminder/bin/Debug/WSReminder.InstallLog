@@ -1,0 +1,63 @@
+﻿Installing assembly 'C:\Users\hinda\source\repos\WSReminder\WSReminder\bin\Debug\WSReminder.exe'.
+Affected parameters are:
+   logtoconsole = 
+   logfile = C:\Users\hinda\source\repos\WSReminder\WSReminder\bin\Debug\WSReminder.InstallLog
+   assemblypath = C:\Users\hinda\source\repos\WSReminder\WSReminder\bin\Debug\WSReminder.exe
+Installing service Service1...
+Service Service1 has been successfully installed.
+Creating EventLog source Service1 in log Application...
+Committing assembly 'C:\Users\hinda\source\repos\WSReminder\WSReminder\bin\Debug\WSReminder.exe'.
+Affected parameters are:
+   logtoconsole = 
+   logfile = C:\Users\hinda\source\repos\WSReminder\WSReminder\bin\Debug\WSReminder.InstallLog
+   assemblypath = C:\Users\hinda\source\repos\WSReminder\WSReminder\bin\Debug\WSReminder.exe
+Uninstalling assembly 'C:\Users\hinda\source\repos\WSReminder\WSReminder\bin\Debug\WSReminder.exe'.
+Affected parameters are:
+   logtoconsole = 
+   logfile = C:\Users\hinda\source\repos\WSReminder\WSReminder\bin\Debug\WSReminder.InstallLog
+   assemblypath = C:\Users\hinda\source\repos\WSReminder\WSReminder\bin\Debug\WSReminder.exe
+Removing EventLog source Service1.
+Service Service1 is being removed from the system...
+Service Service1 was successfully removed from the system.
+Installing assembly 'C:\Users\hinda\source\repos\WSReminder\WSReminder\bin\Debug\WSReminder.exe'.
+Affected parameters are:
+   logtoconsole = 
+   logfile = C:\Users\hinda\source\repos\WSReminder\WSReminder\bin\Debug\WSReminder.InstallLog
+   assemblypath = C:\Users\hinda\source\repos\WSReminder\WSReminder\bin\Debug\WSReminder.exe
+Installing service Service1...
+Service Service1 has been successfully installed.
+Creating EventLog source Service1 in log Application...
+Committing assembly 'C:\Users\hinda\source\repos\WSReminder\WSReminder\bin\Debug\WSReminder.exe'.
+Affected parameters are:
+   logtoconsole = 
+   logfile = C:\Users\hinda\source\repos\WSReminder\WSReminder\bin\Debug\WSReminder.InstallLog
+   assemblypath = C:\Users\hinda\source\repos\WSReminder\WSReminder\bin\Debug\WSReminder.exe
+Uninstalling assembly 'C:\Users\hinda\source\repos\WSReminder\WSReminder\bin\Debug\WSReminder.exe'.
+Affected parameters are:
+   logtoconsole = 
+   logfile = C:\Users\hinda\source\repos\WSReminder\WSReminder\bin\Debug\WSReminder.InstallLog
+   assemblypath = C:\Users\hinda\source\repos\WSReminder\WSReminder\bin\Debug\WSReminder.exe
+Removing EventLog source Service1.
+Service Service1 is being removed from the system...
+Service Service1 was successfully removed from the system.
+Installing assembly 'C:\Users\hinda\source\repos\WSReminder\WSReminder\bin\Debug\WSReminder.exe'.
+Affected parameters are:
+   logtoconsole = 
+   logfile = C:\Users\hinda\source\repos\WSReminder\WSReminder\bin\Debug\WSReminder.InstallLog
+   assemblypath = C:\Users\hinda\source\repos\WSReminder\WSReminder\bin\Debug\WSReminder.exe
+Installing service Service1...
+Service Service1 has been successfully installed.
+Creating EventLog source Service1 in log Application...
+Committing assembly 'C:\Users\hinda\source\repos\WSReminder\WSReminder\bin\Debug\WSReminder.exe'.
+Affected parameters are:
+   logtoconsole = 
+   logfile = C:\Users\hinda\source\repos\WSReminder\WSReminder\bin\Debug\WSReminder.InstallLog
+   assemblypath = C:\Users\hinda\source\repos\WSReminder\WSReminder\bin\Debug\WSReminder.exe
+Uninstalling assembly 'C:\Users\hinda\source\repos\WSReminder\WSReminder\bin\Debug\WSReminder.exe'.
+Affected parameters are:
+   logtoconsole = 
+   logfile = C:\Users\hinda\source\repos\WSReminder\WSReminder\bin\Debug\WSReminder.InstallLog
+   assemblypath = C:\Users\hinda\source\repos\WSReminder\WSReminder\bin\Debug\WSReminder.exe
+Removing EventLog source Service1.
+Service Service1 is being removed from the system...
+Service Service1 was successfully removed from the system.
