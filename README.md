@@ -42,9 +42,11 @@ Client lourd du Projet Conservatoire
   Pour le lancer, démarrez votre terminal en tant qu'administrateur.
   
   Entrez: cd C:\Windows\Microsoft.NET\Framework\v4.0.30319
+  
   Puis entrez: InstallUtil.exe (chemin d'accès au fichier WSReminder.exe sur votre pc)
   
   Vous pouvez maintenant démarrer le service en appuyant sur votre clavier sur (Windows + R).
+  
   Trouvez le service sous le nom de (WSReminder) et appuyez sur "start".
   Le service est désormais lancé.
   
