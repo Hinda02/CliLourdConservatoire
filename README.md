@@ -27,7 +27,8 @@ Client lourd du Projet Conservatoire
   
   Configurez le lancement simultané de l'application et de l'API REST sur Visual Studio: 
   
-    Clique droit sur le nom de la solution > Propriétés > Projets de démarrage multiples > Choisir l'application client lourd et l'API.
+    Clique droit sur le nom de la solution > Propriétés > Projets de démarrage multiples 
+    > Choisir l'application client lourd et l'API.
     
   Démarrez le projet.
   
