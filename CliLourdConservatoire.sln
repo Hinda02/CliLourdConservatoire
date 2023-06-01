@@ -5,7 +5,7 @@ VisualStudioVersion = 17.3.32825.248
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CliLourdConservatoire", "CliLourdConservatoire\CliLourdConservatoire.csproj", "{A4DE53FE-E5FF-4AE9-93DD-E3D615BF9818}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestConservatoire", "TestConservatoire\TestConservatoire.csproj", "{C2744E59-AF5A-46C9-9E1A-742D28358F7A}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TestConservatoire", "TestConservatoire\TestConservatoire.csproj", "{C2744E59-AF5A-46C9-9E1A-742D28358F7A}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
