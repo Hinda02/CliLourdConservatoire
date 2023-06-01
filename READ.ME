@@ -14,4 +14,19 @@
     Clique droit sur le nom de la solution > Propriétés > Projets de démarrage multiples > Choisir l'application client lourd et l'API.
   Démarrez le projet.
   
-3- Installation et configuration du service windows
+3- Installation et configuration du service windows (ne fonctionne que sur un OS Windows)
+  Le service windows responsable de l'envoi de courriels de rappel aux adhérents n'ayant pas payé les frais du trimestre jusqu'à 5 jours avant la date de fin du       trimestre, se trouve dans le dossier WSReminder.
+  
+  Pour le lancer, démarrez votre terminal en tant qu'administrateur.
+  
+  Entrez: cd C:\Windows\Microsoft.NET\Framework\v4.0.30319
+  Puis entrez: InstallUtil.exe (chemin d'accès au fichier WSReminder.exe sur votre pc)
+  
+  Vous pouvez maintenant démarrer le service en appuyant sur votre clavier sur (Windows + R).
+  Trouvez le service sous le nom de (WSReminder) et appuyez sur "start".
+  Le service est désormais lancé.
+  
+  Remarque: pour le supprimer de votre système, arrêtez le "stop" puis entrez: InstallUtil.exe -u (chemin d'accès au fichier WSReminder.exe sur votre pc)
+  dans votre terminal.
+  
+  
