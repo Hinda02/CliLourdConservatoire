@@ -74,3 +74,5 @@ C:\Users\mammo\Source\Repos\CliLourdConservatoire\CliLourdConservatoire\obj\Debu
 C:\Users\mammo\Source\Repos\CliLourdConservatoire\CliLourdConservatoire\obj\Debug\CliLourdConservatoire.csproj.CopyComplete
 C:\Users\mammo\Source\Repos\CliLourdConservatoire\CliLourdConservatoire\obj\Debug\CliLourdConservatoire.exe
 C:\Users\mammo\Source\Repos\CliLourdConservatoire\CliLourdConservatoire\obj\Debug\CliLourdConservatoire.pdb
+C:\Users\hinda\OneDrive\Documents\CliLourdConservatoire\CliLourdConservatoire\bin\Debug\Newtonsoft.Json.dll
+C:\Users\hinda\OneDrive\Documents\CliLourdConservatoire\CliLourdConservatoire\bin\Debug\Newtonsoft.Json.xml

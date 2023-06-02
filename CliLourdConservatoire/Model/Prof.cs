@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Newtonsoft.Json;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -12,7 +13,16 @@ namespace CliLourdConservatoire.Model
         private double salaire;
         private string login;
         private string mdp;
-        
+
+        [JsonConstructor]
+        public Prof(int id, string nom, string prenom, string tel, string mail, string adresse, string instrument, double salaire)
+            : base(id, nom, prenom, tel, mail, adresse)
+        {
+            this.salaire = salaire;
+            this.instrument = instrument;
+
+        }
+
         public Prof(int id, string nom, string prenom, string tel, string mail, string adresse, string instrument, double salaire, string login, string mdp)
             : base(id, nom, prenom, tel, mail, adresse)
         {

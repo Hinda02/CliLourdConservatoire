@@ -2,15 +2,18 @@
 using CliLourdConservatoire.Model;
 using CliLourdConservatoire.View;
 using MySqlX.XDevAPI;
+using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Net;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement.Tab;
 
 namespace CliLourdConservatoire
 {
@@ -87,9 +90,43 @@ namespace CliLourdConservatoire
 
         private void afficherListeProf()
         {
-            listeProf = ProfController.getAll();
-            lbProf.DataSource = listeProf;
-            lbProf.DisplayMember = "Afficher";
+
+
+            using (WebClient web = new WebClient())
+            {
+
+                try
+                {
+
+
+
+                    string url = string.Format("https://localhost:7213/Prof");
+
+
+                    var json = web.DownloadString(url);
+                    listeProf = JsonConvert.DeserializeObject<List<Prof>>(json);
+
+                    lbProf.DataSource = listeProf;
+                    lbProf.DisplayMember = "Afficher";
+
+
+                }
+                catch (JsonException execption)
+                {
+
+                    execption.GetBaseException();
+                }
+            }
+
+
+
+
+
+
+
+
+            //listeProf = ProfController.getAll();
+           
         }
 
         private void afficherListeSeance()

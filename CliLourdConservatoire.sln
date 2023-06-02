@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CliLourdConservatoire", "Cl
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TestConservatoire", "TestConservatoire\TestConservatoire.csproj", "{C2744E59-AF5A-46C9-9E1A-742D28358F7A}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "APIWebRest", "APIWebRest\APIWebRest.csproj", "{A3265C7E-59A2-43A4-88E7-9C4EC6CB9DF1}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{C2744E59-AF5A-46C9-9E1A-742D28358F7A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{C2744E59-AF5A-46C9-9E1A-742D28358F7A}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{C2744E59-AF5A-46C9-9E1A-742D28358F7A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A3265C7E-59A2-43A4-88E7-9C4EC6CB9DF1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A3265C7E-59A2-43A4-88E7-9C4EC6CB9DF1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A3265C7E-59A2-43A4-88E7-9C4EC6CB9DF1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A3265C7E-59A2-43A4-88E7-9C4EC6CB9DF1}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
