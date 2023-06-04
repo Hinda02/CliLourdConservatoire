@@ -13,6 +13,7 @@ using System.Net;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using static Mysqlx.Datatypes.Scalar.Types;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement.Tab;
 
 namespace CliLourdConservatoire
@@ -98,12 +99,12 @@ namespace CliLourdConservatoire
                 try
                 {
 
-
-
                     string url = string.Format("https://localhost:7213/Prof");
-
-
                     var json = web.DownloadString(url);
+
+                    byte[] bytes = Encoding.Default.GetBytes(json);
+                    json = Encoding.UTF8.GetString(bytes);
+
                     listeProf = JsonConvert.DeserializeObject<List<Prof>>(json);
 
                     lbProf.DataSource = listeProf;
@@ -119,13 +120,6 @@ namespace CliLourdConservatoire
             }
 
 
-
-
-
-
-
-
-            //listeProf = ProfController.getAll();
            
         }
 
@@ -181,6 +175,7 @@ namespace CliLourdConservatoire
         private void button1_Click(object sender, EventArgs e)
         {
             f.Close();
+            System.Windows.Forms.Application.ExitThread();
         }
 
         private void lbProf_SelectedIndexChanged(object sender, EventArgs e)

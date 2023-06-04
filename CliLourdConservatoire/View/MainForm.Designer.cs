@@ -288,7 +288,7 @@
             this.label13.AutoSize = true;
             this.label13.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label13.ForeColor = System.Drawing.Color.OrangeRed;
-            this.label13.Location = new System.Drawing.Point(214, 355);
+            this.label13.Location = new System.Drawing.Point(224, 355);
             this.label13.Name = "label13";
             this.label13.Size = new System.Drawing.Size(389, 20);
             this.label13.TabIndex = 27;

@@ -1,23 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "EUyhQeXOvDqsarTUhzEyostXglZpF0zMNiKlgKW9So4Dw+fpMVJH6939w+qMzhWcWs6H6jluczRPhs2IMypJ3A==",
+  "dgSpecHash": "NWKT7YASXDbMY6zhXZamB8rB1h59b7Sv4lUFxRK9aU+ht/J7IsScA6n01X6KZ0faaq9Vq3FddhiNVCe0T6HNCQ==",
   "success": true,
   "projectFilePath": "C:\\Users\\hinda\\OneDrive\\Documents\\CliLourdConservatoire\\TestConservatoire\\TestConservatoire.csproj",
-  "expectedPackageFiles": [
-    "C:\\Users\\hinda\\.nuget\\packages\\coverlet.collector\\6.0.0\\coverlet.collector.6.0.0.nupkg.sha512",
-    "C:\\Users\\hinda\\.nuget\\packages\\microsoft.codecoverage\\17.6.0\\microsoft.codecoverage.17.6.0.nupkg.sha512",
-    "C:\\Users\\hinda\\.nuget\\packages\\microsoft.net.test.sdk\\17.6.0\\microsoft.net.test.sdk.17.6.0.nupkg.sha512",
-    "C:\\Users\\hinda\\.nuget\\packages\\microsoft.testplatform.objectmodel\\17.6.0\\microsoft.testplatform.objectmodel.17.6.0.nupkg.sha512",
-    "C:\\Users\\hinda\\.nuget\\packages\\microsoft.testplatform.testhost\\17.6.0\\microsoft.testplatform.testhost.17.6.0.nupkg.sha512",
-    "C:\\Users\\hinda\\.nuget\\packages\\microsoft.win32.systemevents\\7.0.0\\microsoft.win32.systemevents.7.0.0.nupkg.sha512",
-    "C:\\Users\\hinda\\.nuget\\packages\\mstest.testadapter\\3.0.3\\mstest.testadapter.3.0.3.nupkg.sha512",
-    "C:\\Users\\hinda\\.nuget\\packages\\mstest.testframework\\3.0.3\\mstest.testframework.3.0.3.nupkg.sha512",
-    "C:\\Users\\hinda\\.nuget\\packages\\newtonsoft.json\\13.0.1\\newtonsoft.json.13.0.1.nupkg.sha512",
-    "C:\\Users\\hinda\\.nuget\\packages\\nuget.frameworks\\5.11.0\\nuget.frameworks.5.11.0.nupkg.sha512",
-    "C:\\Users\\hinda\\.nuget\\packages\\system.drawing.common\\7.0.0\\system.drawing.common.7.0.0.nupkg.sha512",
-    "C:\\Users\\hinda\\.nuget\\packages\\system.reflection.metadata\\1.6.0\\system.reflection.metadata.1.6.0.nupkg.sha512",
-    "C:\\Users\\hinda\\.nuget\\packages\\system.security.permissions\\7.0.0\\system.security.permissions.7.0.0.nupkg.sha512",
-    "C:\\Users\\hinda\\.nuget\\packages\\system.windows.extensions\\7.0.0\\system.windows.extensions.7.0.0.nupkg.sha512"
-  ],
+  "expectedPackageFiles": [],
   "logs": []
 }

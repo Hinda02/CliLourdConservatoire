@@ -181,33 +181,6 @@ namespace CliLourdConservatoire
             lbInscription.SetSelected(index, true);
         }
 
-        /*public bool compareDates(DateTime d1)
-        {
-            bool result;
-
-            DateTime date1 = DateTime.Now;
-            int lastyear = date1.Year - 1;
-            string date = d1.ToString("MM-dd");
-
-            if(d1.Month > 5 && date1.Month < 6)
-            {
-                date = date + "-" + lastyear;
-            }
-
-            DateTime date2 = Convert.ToDateTime(date);
-
-            int res = DateTime.Compare(date1, date2);
-
-            if (res <= 0)
-            {
-                result = true;
-            }
-            else
-            {
-                result = false;
-            }
-
-            return result;
-        }*/
+       
     }
 }

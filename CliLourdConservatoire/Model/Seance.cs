@@ -34,8 +34,8 @@ namespace CliLourdConservatoire.Model
 
         public string Afficher
         {
-            get => Convert.ToString(this.NumSceance).PadRight(5 - Convert.ToString(this.NumSceance).Length) 
-                + "\t\t" + this.Jour.PadRight(17 - this.Jour.Length) + "\t\t"
+            get => Convert.ToString(this.NumSceance).PadRight(3 - Convert.ToString(this.NumSceance).Length) 
+                + "\t\t" + this.Jour.PadRight(19 - this.Jour.Length) + "\t\t"
                 + this.Tranche.PadRight(14 - this.Tranche.Length) + "\t\t"
                 + Convert.ToString(this.Niveau).PadRight(2 - Convert.ToString(this.Niveau).Length) + "\t\t"
                 + Convert.ToString(this.Capacite).PadRight(3 - Convert.ToString(this.Capacite).Length);
