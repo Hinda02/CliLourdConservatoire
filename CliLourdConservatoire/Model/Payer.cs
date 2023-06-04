@@ -6,8 +6,12 @@ using System.Threading.Tasks;
 
 namespace CliLourdConservatoire.Model
 {
+    /// <summary>
+    /// Classe Payer
+    /// </summary>
     public class Payer
     {
+        //Attributs privés
         private int idProf;
         private int idEleve;
         private int numSeance;
@@ -15,6 +19,15 @@ namespace CliLourdConservatoire.Model
         private DateTime datePaiement;
         private int paye;
 
+        /// <summary>
+        /// Constructeur de la classe Payer
+        /// </summary>
+        /// <param name="idProf"></param>
+        /// <param name="idEleve"></param>
+        /// <param name="numSeance"></param>
+        /// <param name="libelle"></param>
+        /// <param name="datePaiement"></param>
+        /// <param name="paye"></param>
         public Payer(int idProf, int idEleve, int numSeance, string libelle, DateTime datePaiement, int paye)
         {
             this.idProf = idProf;
@@ -25,6 +38,7 @@ namespace CliLourdConservatoire.Model
             this.paye = paye;
         }
 
+        //Propriétés publiques
         public int IdProf { get => idProf; set => idProf = value; }
         public int IdEleve { get => idEleve; set => idEleve = value; }
         public int NumSeance { get => numSeance; set => numSeance = value; }

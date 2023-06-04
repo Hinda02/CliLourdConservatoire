@@ -8,6 +8,7 @@ namespace CliLourdConservatoire.Model
 {
     public class Personne
     {
+        //Attributs privés
         private int id;
         private string nom;
         private string prenom;
@@ -15,6 +16,16 @@ namespace CliLourdConservatoire.Model
         private string email;
         private string adresse;
 
+        /// <summary>
+        /// Constructeur 1 de la classe Personne
+        /// avec l'attribut id
+        /// </summary>
+        /// <param name="id"></param>
+        /// <param name="nom"></param>
+        /// <param name="prenom"></param>
+        /// <param name="telephone"></param>
+        /// <param name="email"></param>
+        /// <param name="adresse"></param>
         public Personne(int id, string nom, string prenom, string telephone, string email, string adresse)
         {
             this.id = id;
@@ -25,6 +36,15 @@ namespace CliLourdConservatoire.Model
             this.adresse = adresse;
         }
 
+        /// <summary>
+        /// Constructeur 2 de la classe Personne
+        /// sans l'attribut id
+        /// </summary>
+        /// <param name="nom"></param>
+        /// <param name="prenom"></param>
+        /// <param name="telephone"></param>
+        /// <param name="email"></param>
+        /// <param name="adresse"></param>
         public Personne(string nom, string prenom, string telephone, string email, string adresse)
         {
             this.nom = nom;
@@ -34,6 +54,7 @@ namespace CliLourdConservatoire.Model
             this.adresse = adresse;
         }
 
+        //Propriétés publiques
         public int Id { get => id; set => id = value; }
         public string Nom { get => nom; set => nom = value; }
         public string Prenom { get => prenom; set => prenom = value; }
@@ -46,6 +67,7 @@ namespace CliLourdConservatoire.Model
             get => Nom + " " + Prenom;
         }
 
+        //Propriété Afficher dela classe Personne
         public virtual string Afficher
         {
             get =>  this.Identite;

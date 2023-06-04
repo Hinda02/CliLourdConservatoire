@@ -6,8 +6,12 @@ using System.Threading.Tasks;
 
 namespace CliLourdConservatoire.Model
 {
+    /// <summary>
+    /// Classe Seance
+    /// </summary>
     public class Seance
     {
+        //Attributs privés
         private int idProf;
         private int numSceance;
         private string tranche;
@@ -15,6 +19,15 @@ namespace CliLourdConservatoire.Model
         private int niveau;
         private int capacite;
 
+        /// <summary>
+        /// Constructeur de la classe Seance
+        /// </summary>
+        /// <param name="idProf"></param>
+        /// <param name="numSceance"></param>
+        /// <param name="tranche"></param>
+        /// <param name="jour"></param>
+        /// <param name="niveau"></param>
+        /// <param name="capacite"></param>
         public Seance(int idProf, int numSceance, string tranche, string jour, int niveau, int capacite)
         {
             this.idProf = idProf;
@@ -25,6 +38,7 @@ namespace CliLourdConservatoire.Model
             this.capacite = capacite;
         }
 
+        //Propriétés publiques
         public int IdProf { get => idProf; set => idProf = value; }
         public int NumSceance { get => numSceance; set => numSceance = value; }
         public string Tranche { get => tranche; set => tranche = value; }
@@ -32,6 +46,7 @@ namespace CliLourdConservatoire.Model
         public int Niveau { get => niveau; set => niveau = value; }
         public int Capacite { get => capacite; set => capacite = value; }
 
+        //Propriété affichant les attributs de la classe sous un format précis
         public string Afficher
         {
             get => Convert.ToString(this.NumSceance).PadRight(3 - Convert.ToString(this.NumSceance).Length) 

@@ -6,8 +6,12 @@ using System.Threading.Tasks;
 
 namespace CliLourdConservatoire.Model
 {
+    /// <summary>
+    /// Classe Inscription
+    /// </summary>
     public class Inscription
     {
+        //Attributs privés
         private int idProf;
         private int idEleve;
         private string prof;
@@ -15,6 +19,14 @@ namespace CliLourdConservatoire.Model
         private int numSeance;
         private DateTime dateInscription;
 
+        /// <summary>
+        /// Constructeur de la classe Inscription
+        /// prenant les 2 premiers attributs comme 'string'
+        /// </summary>
+        /// <param name="idProf"></param>
+        /// <param name="idEleve"></param>
+        /// <param name="numSeance"></param>
+        /// <param name="dateInscription"></param>
         public Inscription(int idProf, int idEleve, int numSeance, DateTime dateInscription)
         {
             this.idProf = idProf;
@@ -23,6 +35,14 @@ namespace CliLourdConservatoire.Model
             this.dateInscription = dateInscription;
         }
 
+        /// <summary>
+        /// Constructeur de la classe Inscription
+        /// prenant les 2 premiers attributs comme 'int'
+        /// </summary>
+        /// <param name="prof"></param>
+        /// <param name="eleve"></param>
+        /// <param name="numSeance"></param>
+        /// <param name="dateInscription"></param>
         public Inscription(string prof, string eleve, int numSeance, DateTime dateInscription)
         {
             this.prof = prof;
@@ -31,6 +51,7 @@ namespace CliLourdConservatoire.Model
             this.dateInscription = dateInscription;
         }
 
+        //Propriétés publiques
         public int IdProf { get => idProf; set => idProf = value; }
         public int IdEleve { get => idEleve; set => idEleve = value; }
         public int NumSeance { get => numSeance; set => numSeance = value; }
@@ -38,6 +59,7 @@ namespace CliLourdConservatoire.Model
         public string Prof { get => prof; set => prof = value; }
         public string Eleve { get => eleve; set => eleve = value; }
 
+        //Propriété Affichant les attributs de la classe sous un format précis
         public string Afficher
         {
             get => this.Prof.PadRight(20 - this.Prof.Length)
