@@ -8,10 +8,17 @@ using System.Threading.Tasks;
 
 namespace CliLourdConservatoire.DAL
 {
+    /// <summary>
+    /// Couche contenant les méthodes d'accès aux données des séances
+    /// </summary>
     public class SeanceDAO
     {
         private static ConnexionSql connect = ConnexionSql.getInstance("localhost", "conservatoire", "root", "");
 
+        /// <summary>
+        /// récupérer la liste de toutes les séances
+        /// </summary>
+        /// <returns type="List<Seance>"></returns>
         public static List<Seance> getAll()
         {
             connect.openConnection();
@@ -43,6 +50,11 @@ namespace CliLourdConservatoire.DAL
             return listeSeances;
         }
 
+        /// <summary>
+        /// récupérer la liste des séances d'un professeur par son id
+        /// </summary>
+        /// <param name="id"></param>
+        /// <returns type="List<Seance>"></returns>
         public static List<Seance> getByIdProf(int id)
         {
             connect.openConnection();
@@ -74,6 +86,10 @@ namespace CliLourdConservatoire.DAL
             return listeSeances;
         }
 
+        /// <summary>
+        /// mettre à jour les données d'une séance
+        /// </summary>
+        /// <param name="seance"></param>
         public static void updateSeance(Seance seance)
         {
             connect.openConnection();
@@ -86,6 +102,10 @@ namespace CliLourdConservatoire.DAL
             connect.closeConnection();
         }
 
+        /// <summary>
+        /// créer une nouvelle séance
+        /// </summary>
+        /// <param name="seance"></param>
         public static void InsertSeance(Seance seance)
         {
             connect.openConnection();
@@ -99,6 +119,11 @@ namespace CliLourdConservatoire.DAL
             connect.closeConnection();
         }
 
+        /// <summary>
+        /// récupérer le dernier numéro de séance pour un professeur donné
+        /// </summary>
+        /// <param name="idProf"></param>
+        /// <returns></returns>
         public static int getLastNumSeance(int idProf)
         {
             int numSeance = -1;

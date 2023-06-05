@@ -8,10 +8,20 @@ using System.Threading.Tasks;
 
 namespace CliLourdConservatoire.DAL
 {
+    /// <summary>
+    /// Couche contenant les méthodes d'accès aux données des paiements
+    /// </summary>
     public class PayerDAO
     {
         private static ConnexionSql connect = ConnexionSql.getInstance("localhost", "conservatoire", "root", "");
 
+        /// <summary>
+        /// récupérer le paiement pour une inscription
+        /// selon un trimestre donné.
+        /// </summary>
+        /// <param name="insc"></param>
+        /// <param name="trim"></param>
+        /// <returns type="Payer"></returns>
         public static Payer getByInscription_Trimestre(Inscription insc, string trim)
         {
             connect.openConnection();
@@ -43,6 +53,10 @@ namespace CliLourdConservatoire.DAL
             return paiement;
         }
 
+        /// <summary>
+        /// mettre à jour la datte de paiement
+        /// </summary>
+        /// <param name="paiement"></param>
         public static void updateDatePaiement(Payer paiement)
         {
             connect.openConnection();

@@ -9,10 +9,18 @@ using System.Threading.Tasks;
 
 namespace CliLourdConservatoire.DAL
 {
+    /// <summary>
+    /// Couche contenant les méthodes d'accès aux données des trimestres
+    /// </summary>
     public class TrimestreDAO
     {
         private static ConnexionSql connect = ConnexionSql.getInstance("localhost", "conservatoire", "root", "");
 
+        /// <summary>
+        /// récupérer les données d'un trimestre selon son libelle
+        /// </summary>
+        /// <param name="trim"></param>
+        /// <returns type="Trimestre"></returns>
         public static Trimestre getByTrimestre(string trim)
         {
             connect.openConnection();

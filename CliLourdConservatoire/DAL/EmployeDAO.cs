@@ -9,10 +9,19 @@ using System.Threading.Tasks;
 
 namespace CliLourdConservatoire.DAL
 {
+    /// <summary>
+    /// Couche contenant les méthodes d'accès aux données des employés
+    /// </summary>
     public class EmployeDAO
     {
         private static ConnexionSql connect = ConnexionSql.getInstance("localhost", "conservatoire", "root", "");
 
+        /// <summary>
+        /// gestion de l'authentification d'un employé
+        /// </summary>
+        /// <param name="login"></param>
+        /// <param name="pwd"></param>
+        /// <returns type="bool"></returns>
         public static bool Authentifier(string login, string pwd)
         {
             connect.openConnection();

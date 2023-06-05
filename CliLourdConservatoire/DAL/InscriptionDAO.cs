@@ -10,11 +10,18 @@ using System.Threading.Tasks;
 
 namespace CliLourdConservatoire.DAL
 {
+    /// <summary>
+    /// Couche contenant les méthodes d'accès aux données des horaires
+    /// </summary>
     public class InscriptionDAO
     {
 
         private static ConnexionSql connect = ConnexionSql.getInstance("localhost", "conservatoire", "root", "");
 
+        /// <summary>
+        /// récupérer la liste de toutes les inscriptions
+        /// </summary>
+        /// <returns type="List<Inscription>"></returns>
         public static List<Inscription> getAll()
         {
             connect.openConnection();
@@ -43,6 +50,10 @@ namespace CliLourdConservatoire.DAL
             return listeInscriptions;
         }
 
+        /// <summary>
+        /// récupérer la liste de toutes les inscriptions formatées
+        /// </summary>
+        /// <returns type="List<Inscription>"></returns>
         public static List<Inscription> getAllAffichage()
         {
             List<Inscription> listeReturn = new List<Inscription>();
@@ -61,6 +72,12 @@ namespace CliLourdConservatoire.DAL
             return listeReturn;
         }
 
+        /// <summary>
+        /// récupérer la liste des inscription pour
+        /// une séance donnée.
+        /// </summary>
+        /// <param name="seance"></param>
+        /// <returns type="List<Inscription>"></returns>
         public static List<Inscription> getBySeance(Seance seance)
         {
             connect.openConnection();

@@ -8,11 +8,18 @@ using System.Threading.Tasks;
 
 namespace CliLourdConservatoire.DAL
 {
+    /// <summary>
+    /// Couche contenant les méthodes d'accès aux données des jours de la semaine
+    /// </summary>
     public class JoursDAO
     {
 
         private static ConnexionSql connect = ConnexionSql.getInstance("localhost", "conservatoire", "root", "");
 
+        /// <summary>
+        /// récupérer les jours de la semaine
+        /// </summary>
+        /// <returns type="List<Jours>"></returns>
         public static List<Jours> getAll()
         {
             connect.openConnection();

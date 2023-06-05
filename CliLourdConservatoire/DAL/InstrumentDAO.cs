@@ -9,9 +9,17 @@ using System.Threading.Tasks;
 
 namespace CliLourdConservatoire.DAL
 {
+    /// <summary>
+    /// Couche contenant les méthodes d'accès aux données des instruments
+    /// </summary>
     public class InstrumentDAO
     {
         private static ConnexionSql connect = ConnexionSql.getInstance("localhost", "conservatoire", "root", "");
+
+        /// <summary>
+        /// récupérer tous les instruments
+        /// </summary>
+        /// <returns type="List<Instrument>"></returns>
         public static List<Instrument> getAll()
         {
             connect.openConnection();

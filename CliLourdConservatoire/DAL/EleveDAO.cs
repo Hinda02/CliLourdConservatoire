@@ -10,10 +10,19 @@ using System.Threading.Tasks;
 
 namespace CliLourdConservatoire.DAL
 {
+    /// <summary>
+    /// Couche contenant les méthodes d'accès aux données des adhérents
+    /// </summary>
     public class EleveDAO
     {
+        //Instanciation d'une connexion à la bdd
         private static ConnexionSql connect = ConnexionSql.getInstance("localhost", "conservatoire", "root", "");
 
+        /// <summary>
+        /// récupérer un adhérent grâce à son id
+        /// </summary>
+        /// <param name="id"></param>
+        /// <returns type="Eleve"></returns>
         public static Eleve getById(int id)
         {
             connect.openConnection();
@@ -44,6 +53,11 @@ namespace CliLourdConservatoire.DAL
             return eleve;
         }
 
+        /// <summary>
+        /// récuperer une liste d'adhérents grâce à leurs inscriptions.
+        /// </summary>
+        /// <param name="inscriptions"></param>
+        /// <returns type="List<Eleve>"></returns>
         public static List<Eleve> getByInscrptions(List<Inscription> inscriptions)
         {
             Eleve eleve = null;

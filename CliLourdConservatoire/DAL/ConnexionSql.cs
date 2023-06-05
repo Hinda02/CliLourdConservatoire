@@ -9,6 +9,9 @@ using System.Threading.Tasks;
 
 namespace CliLourdConservatoire.DAL
 {
+    /// <summary>
+    /// Classe de connexion à la base de données
+    /// </summary>
     public class ConnexionSql
     {
 

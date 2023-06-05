@@ -9,10 +9,17 @@ using System.Threading.Tasks;
 
 namespace CliLourdConservatoire.DAL
 {
+    /// <summary>
+    /// Couche contenant les méthodes d'accès aux données des professeurs
+    /// </summary>
     public class ProfDAO
     {
         private static ConnexionSql connect = ConnexionSql.getInstance("localhost", "conservatoire", "root", "");
 
+        /// <summary>
+        /// récupérer la liste de tous les professeurs
+        /// </summary>
+        /// <returns type="List<Prof>"></returns>
         public static List<Prof> getAll()
         {
             connect.openConnection();
@@ -47,6 +54,11 @@ namespace CliLourdConservatoire.DAL
             return listeProfs;
         }
 
+        /// <summary>
+        /// récupérer un prof selon son id
+        /// </summary>
+        /// <param name="id"></param>
+        /// <returns type="Prof"></returns>
         public static Prof getById(int id)
         {
             connect.openConnection();
@@ -80,6 +92,10 @@ namespace CliLourdConservatoire.DAL
             return prof;
         }
 
+        /// <summary>
+        /// Insérer un nouveau professeur
+        /// </summary>
+        /// <param name="newProf"></param>
         public static void InsertProf(Prof newProf)
         {
             AddPersonne(newProf);
@@ -95,6 +111,10 @@ namespace CliLourdConservatoire.DAL
             connect.closeConnection();
         }
 
+        /// <summary>
+        /// Insérer une personne
+        /// </summary>
+        /// <param name="newProf"></param>
         public static void AddPersonne(Prof newProf)
         {
             connect.openConnection();
@@ -108,6 +128,11 @@ namespace CliLourdConservatoire.DAL
             connect.closeConnection();
         }
 
+        /// <summary>
+        /// récuperer l'id d'une personne selon son mail
+        /// </summary>
+        /// <param name="mail"></param>
+        /// <returns type="int"></returns>
         public static int GetIdPers(string mail)
         {
             int id = -1;
@@ -126,6 +151,10 @@ namespace CliLourdConservatoire.DAL
             return id;
         }
 
+        /// <summary>
+        /// supprimer un professeur
+        /// </summary>
+        /// <param name="prof"></param>
         public static void DeleteProf(Prof prof)
         {
             connect.openConnection();
