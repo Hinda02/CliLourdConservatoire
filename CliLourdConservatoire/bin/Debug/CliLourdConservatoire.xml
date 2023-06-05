@@ -1,0 +1,962 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>CliLourdConservatoire</name>
+    </assembly>
+    <members>
+        <member name="T:CliLourdConservatoire.Controller.EleveController">
+            <summary>
+            Controlleur gérant l'appel des méthodes de la couche
+            d'accès aux données gérant et manipulant les données
+            des adhérents.
+            </summary>
+        </member>
+        <member name="M:CliLourdConservatoire.Controller.EleveController.getById(System.Int32)">
+            <summary>
+            récupérer un adhérent grâce à son id
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:CliLourdConservatoire.Controller.EleveController.getByInscrptions(System.Collections.Generic.List{CliLourdConservatoire.Model.Inscription})">
+            <summary>
+            récuperer une liste d'adhérents grâce à leurs inscriptions.
+            </summary>
+            <param name="inscriptions"></param>
+            <returns></returns>
+        </member>
+        <member name="T:CliLourdConservatoire.Controller.EmployeController">
+            <summary>
+            Controlleur gérant l'appel des méthodes de la couche
+            d'accès aux données gérant et manipulant les données
+            des employés.
+            </summary>
+        </member>
+        <member name="M:CliLourdConservatoire.Controller.EmployeController.Authentifier(System.String,System.String)">
+            <summary>
+            gestion de l'appel de la méthode d'authentification
+            </summary>
+            <param name="login"></param>
+            <param name="pwd"></param>
+            <returns></returns>
+        </member>
+        <member name="T:CliLourdConservatoire.Controller.HeureController">
+            <summary>
+            Controlleur gérant l'appel des méthodes de la couche
+            d'accès aux données gérant et manipulant les données
+            des horaires.
+            </summary>
+        </member>
+        <member name="M:CliLourdConservatoire.Controller.HeureController.getAll">
+            <summary>
+            récupérer les horaires
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:CliLourdConservatoire.Controller.HeureController.getBySeance(CliLourdConservatoire.Model.Seance)">
+            <summary>
+            récupérer les horaires selon une séance donnée
+            </summary>
+            <param name="seance"></param>
+            <returns></returns>
+        </member>
+        <member name="M:CliLourdConservatoire.Controller.HeureController.getByJour_Id(System.String,System.Int32)">
+            <summary>
+            récupérer les horaires selon un jour et une idProf
+            </summary>
+            <param name="jour"></param>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="T:CliLourdConservatoire.Controller.InscriptionController">
+            <summary>
+            Controlleur gérant l'appel des méthodes de la couche
+            d'accès aux données gérant et manipulant les données
+            des inscriptions.
+            </summary>
+        </member>
+        <member name="M:CliLourdConservatoire.Controller.InscriptionController.getAll">
+            <summary>
+            récupérer la liste de toutes les inscriptions
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:CliLourdConservatoire.Controller.InscriptionController.getAllAffichage">
+            <summary>
+            récupérer la liste de toutes les inscriptions formatées
+            pour son affichage.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:CliLourdConservatoire.Controller.InscriptionController.getBySeance(CliLourdConservatoire.Model.Seance)">
+            <summary>
+            récupérer la liste des inscription pour
+            une séance donnée.
+            </summary>
+            <param name="seance"></param>
+            <returns></returns>
+        </member>
+        <member name="T:CliLourdConservatoire.Controller.InstrumentController">
+            <summary>
+            Controlleur gérant l'appel des méthodes de la couche
+            d'accès aux données gérant et manipulant les données
+            des instruments.
+            </summary>
+        </member>
+        <member name="M:CliLourdConservatoire.Controller.InstrumentController.getAll">
+            <summary>
+            récupérer tous les instruments
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:CliLourdConservatoire.Controller.JourController">
+            <summary>
+            Controlleur gérant l'appel des méthodes de la couche
+            d'accès aux données gérant et manipulant les données
+            des jours de la semaines.
+            </summary>
+        </member>
+        <member name="M:CliLourdConservatoire.Controller.JourController.getAll">
+            <summary>
+            récupérer les jours de la semaine
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:CliLourdConservatoire.Controller.PayerController">
+            <summary>
+            Controlleur gérant l'appel des méthodes de la couche
+            d'accès aux données gérant et manipulant les données
+            des paiements.
+            </summary>
+        </member>
+        <member name="M:CliLourdConservatoire.Controller.PayerController.getByInscription_Trimestre(CliLourdConservatoire.Model.Inscription,System.String)">
+            <summary>
+            récupérer le paiement pour une inscription
+            selon un trimestre donné.
+            </summary>
+            <param name="insc"></param>
+            <param name="trim"></param>
+            <returns></returns>
+        </member>
+        <member name="M:CliLourdConservatoire.Controller.PayerController.updateDatePaiement(CliLourdConservatoire.Model.Payer)">
+            <summary>
+            mettre à jour la datte de paiement
+            </summary>
+            <param name="paiement"></param>
+        </member>
+        <member name="T:CliLourdConservatoire.Controller.ProfController">
+            <summary>
+            Controlleur gérant l'appel des méthodes de la couche
+            d'accès aux données gérant et manipulant les données
+            des professeurs.
+            </summary>
+        </member>
+        <member name="M:CliLourdConservatoire.Controller.ProfController.getAll">
+            <summary>
+            récupérer la liste de tous les professeurs
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:CliLourdConservatoire.Controller.ProfController.getById(System.Int32)">
+            <summary>
+            récupérer un prof selon son id
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:CliLourdConservatoire.Controller.ProfController.InsertProf(CliLourdConservatoire.Model.Prof)">
+            <summary>
+            Insérer un nouveau professeur
+            </summary>
+            <param name="newProf"></param>
+        </member>
+        <member name="M:CliLourdConservatoire.Controller.ProfController.AddPersonne(CliLourdConservatoire.Model.Prof)">
+            <summary>
+            Insérer une personne
+            </summary>
+            <param name="newProf"></param>
+        </member>
+        <member name="M:CliLourdConservatoire.Controller.ProfController.GetIdPers(System.String)">
+            <summary>
+            récuperer l'id d'une personne selon son mail
+            </summary>
+            <param name="mail"></param>
+            <returns></returns>
+        </member>
+        <member name="M:CliLourdConservatoire.Controller.ProfController.DeleteProf(CliLourdConservatoire.Model.Prof)">
+            <summary>
+            supprimer un professeur
+            </summary>
+            <param name="prof"></param>
+        </member>
+        <member name="T:CliLourdConservatoire.Controller.SeanceController">
+            <summary>
+            Controlleur gérant l'appel des méthodes de la couche
+            d'accès aux données gérant et manipulant les données
+            des séances.
+            </summary>
+        </member>
+        <member name="M:CliLourdConservatoire.Controller.SeanceController.getAll">
+            <summary>
+            récupérer la liste de toutes les séances
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:CliLourdConservatoire.Controller.SeanceController.getByIdProf(System.Int32)">
+            <summary>
+            récupérer la liste des séances d'un professeur par son id
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:CliLourdConservatoire.Controller.SeanceController.updateSeance(CliLourdConservatoire.Model.Seance)">
+            <summary>
+            mettre à jour les données d'une séance
+            </summary>
+            <param name="seance"></param>
+        </member>
+        <member name="M:CliLourdConservatoire.Controller.SeanceController.InsertSeance(CliLourdConservatoire.Model.Seance)">
+            <summary>
+            créer une nouvelle séance
+            </summary>
+            <param name="seance"></param>
+        </member>
+        <member name="M:CliLourdConservatoire.Controller.SeanceController.getLastNumSeance(System.Int32)">
+            <summary>
+            récupérer le dernier numéro de séance pour un professeur donné
+            </summary>
+            <param name="idProf"></param>
+            <returns></returns>
+        </member>
+        <member name="T:CliLourdConservatoire.Controller.TrimestreController">
+            <summary>
+            Controlleur gérant l'appel des méthodes de la couche
+            d'accès aux données gérant et manipulant les données
+            des trimestres.
+            </summary>
+        </member>
+        <member name="M:CliLourdConservatoire.Controller.TrimestreController.getByTrimestre(System.String)">
+            <summary>
+            récupérer les données d'un trimestre selon son libelle
+            </summary>
+            <param name="trim"></param>
+            <returns></returns>
+        </member>
+        <member name="T:CliLourdConservatoire.DAL.ConnexionSql">
+            <summary>
+            Classe de connexion à la base de données
+            </summary>
+        </member>
+        <member name="M:CliLourdConservatoire.DAL.ConnexionSql.getInstance(System.String,System.String,System.String,System.String)">
+            méthode de création d'une instance de connexion si elle n'existe pas (singleton)
+        </member>
+        <member name="M:CliLourdConservatoire.DAL.ConnexionSql.openConnection">
+            Ouverture de la connexion
+        </member>
+        <member name="M:CliLourdConservatoire.DAL.ConnexionSql.closeConnection">
+            Fermeture de la connexion
+        </member>
+        <member name="M:CliLourdConservatoire.DAL.ConnexionSql.reqExec(System.String)">
+            Exécution d'une requête
+        </member>
+        <member name="T:CliLourdConservatoire.DAL.EleveDAO">
+            <summary>
+            Couche contenant les méthodes d'accès aux données des adhérents
+            </summary>
+        </member>
+        <member name="M:CliLourdConservatoire.DAL.EleveDAO.getById(System.Int32)">
+            <summary>
+            récupérer un adhérent grâce à son id
+            </summary>
+            <param name="id"></param>
+            <returns type="Eleve"></returns>
+        </member>
+        <!-- Badly formed XML comment ignored for member "M:CliLourdConservatoire.DAL.EleveDAO.getByInscrptions(System.Collections.Generic.List{CliLourdConservatoire.Model.Inscription})" -->
+        <member name="T:CliLourdConservatoire.DAL.EmployeDAO">
+            <summary>
+            Couche contenant les méthodes d'accès aux données des employés
+            </summary>
+        </member>
+        <member name="M:CliLourdConservatoire.DAL.EmployeDAO.Authentifier(System.String,System.String)">
+            <summary>
+            gestion de l'authentification d'un employé
+            </summary>
+            <param name="login"></param>
+            <param name="pwd"></param>
+            <returns type="bool"></returns>
+        </member>
+        <member name="T:CliLourdConservatoire.DAL.HeureDAO">
+            <summary>
+            Couche contenant les méthodes d'accès aux données des horaires
+            </summary>
+        </member>
+        <!-- Badly formed XML comment ignored for member "M:CliLourdConservatoire.DAL.HeureDAO.getAll" -->
+        <!-- Badly formed XML comment ignored for member "M:CliLourdConservatoire.DAL.HeureDAO.getBySeance(CliLourdConservatoire.Model.Seance)" -->
+        <!-- Badly formed XML comment ignored for member "M:CliLourdConservatoire.DAL.HeureDAO.getByJour_Id(System.String,System.Int32)" -->
+        <member name="T:CliLourdConservatoire.DAL.InscriptionDAO">
+            <summary>
+            Couche contenant les méthodes d'accès aux données des horaires
+            </summary>
+        </member>
+        <!-- Badly formed XML comment ignored for member "M:CliLourdConservatoire.DAL.InscriptionDAO.getAll" -->
+        <!-- Badly formed XML comment ignored for member "M:CliLourdConservatoire.DAL.InscriptionDAO.getAllAffichage" -->
+        <!-- Badly formed XML comment ignored for member "M:CliLourdConservatoire.DAL.InscriptionDAO.getBySeance(CliLourdConservatoire.Model.Seance)" -->
+        <member name="T:CliLourdConservatoire.DAL.InstrumentDAO">
+            <summary>
+            Couche contenant les méthodes d'accès aux données des instruments
+            </summary>
+        </member>
+        <!-- Badly formed XML comment ignored for member "M:CliLourdConservatoire.DAL.InstrumentDAO.getAll" -->
+        <member name="T:CliLourdConservatoire.DAL.JoursDAO">
+            <summary>
+            Couche contenant les méthodes d'accès aux données des jours de la semaine
+            </summary>
+        </member>
+        <!-- Badly formed XML comment ignored for member "M:CliLourdConservatoire.DAL.JoursDAO.getAll" -->
+        <member name="T:CliLourdConservatoire.DAL.PayerDAO">
+            <summary>
+            Couche contenant les méthodes d'accès aux données des paiements
+            </summary>
+        </member>
+        <member name="M:CliLourdConservatoire.DAL.PayerDAO.getByInscription_Trimestre(CliLourdConservatoire.Model.Inscription,System.String)">
+            <summary>
+            récupérer le paiement pour une inscription
+            selon un trimestre donné.
+            </summary>
+            <param name="insc"></param>
+            <param name="trim"></param>
+            <returns type="Payer"></returns>
+        </member>
+        <member name="M:CliLourdConservatoire.DAL.PayerDAO.updateDatePaiement(CliLourdConservatoire.Model.Payer)">
+            <summary>
+            mettre à jour la datte de paiement
+            </summary>
+            <param name="paiement"></param>
+        </member>
+        <member name="T:CliLourdConservatoire.DAL.ProfDAO">
+            <summary>
+            Couche contenant les méthodes d'accès aux données des professeurs
+            </summary>
+        </member>
+        <!-- Badly formed XML comment ignored for member "M:CliLourdConservatoire.DAL.ProfDAO.getAll" -->
+        <member name="M:CliLourdConservatoire.DAL.ProfDAO.getById(System.Int32)">
+            <summary>
+            récupérer un prof selon son id
+            </summary>
+            <param name="id"></param>
+            <returns type="Prof"></returns>
+        </member>
+        <member name="M:CliLourdConservatoire.DAL.ProfDAO.InsertProf(CliLourdConservatoire.Model.Prof)">
+            <summary>
+            Insérer un nouveau professeur
+            </summary>
+            <param name="newProf"></param>
+        </member>
+        <member name="M:CliLourdConservatoire.DAL.ProfDAO.AddPersonne(CliLourdConservatoire.Model.Prof)">
+            <summary>
+            Insérer une personne
+            </summary>
+            <param name="newProf"></param>
+        </member>
+        <member name="M:CliLourdConservatoire.DAL.ProfDAO.GetIdPers(System.String)">
+            <summary>
+            récuperer l'id d'une personne selon son mail
+            </summary>
+            <param name="mail"></param>
+            <returns type="int"></returns>
+        </member>
+        <member name="M:CliLourdConservatoire.DAL.ProfDAO.DeleteProf(CliLourdConservatoire.Model.Prof)">
+            <summary>
+            supprimer un professeur
+            </summary>
+            <param name="prof"></param>
+        </member>
+        <member name="T:CliLourdConservatoire.DAL.SeanceDAO">
+            <summary>
+            Couche contenant les méthodes d'accès aux données des séances
+            </summary>
+        </member>
+        <!-- Badly formed XML comment ignored for member "M:CliLourdConservatoire.DAL.SeanceDAO.getAll" -->
+        <!-- Badly formed XML comment ignored for member "M:CliLourdConservatoire.DAL.SeanceDAO.getByIdProf(System.Int32)" -->
+        <member name="M:CliLourdConservatoire.DAL.SeanceDAO.updateSeance(CliLourdConservatoire.Model.Seance)">
+            <summary>
+            mettre à jour les données d'une séance
+            </summary>
+            <param name="seance"></param>
+        </member>
+        <member name="M:CliLourdConservatoire.DAL.SeanceDAO.InsertSeance(CliLourdConservatoire.Model.Seance)">
+            <summary>
+            créer une nouvelle séance
+            </summary>
+            <param name="seance"></param>
+        </member>
+        <member name="M:CliLourdConservatoire.DAL.SeanceDAO.getLastNumSeance(System.Int32)">
+            <summary>
+            récupérer le dernier numéro de séance pour un professeur donné
+            </summary>
+            <param name="idProf"></param>
+            <returns></returns>
+        </member>
+        <member name="T:CliLourdConservatoire.DAL.TrimestreDAO">
+            <summary>
+            Couche contenant les méthodes d'accès aux données des trimestres
+            </summary>
+        </member>
+        <member name="M:CliLourdConservatoire.DAL.TrimestreDAO.getByTrimestre(System.String)">
+            <summary>
+            récupérer les données d'un trimestre selon son libelle
+            </summary>
+            <param name="trim"></param>
+            <returns type="Trimestre"></returns>
+        </member>
+        <member name="T:CliLourdConservatoire.Model.Instrument">
+            <summary>
+            Classe Instrument
+            </summary>
+        </member>
+        <member name="M:CliLourdConservatoire.Model.Instrument.#ctor(System.String)">
+            <summary>
+            Constructeur de la classe Instrument
+            </summary>
+            <param name="libelle"></param>
+        </member>
+        <member name="T:CliLourdConservatoire.Model.Eleve">
+            <summary>
+            Classe Eleve héritant de Personne
+            </summary>
+        </member>
+        <member name="M:CliLourdConservatoire.Model.Eleve.#ctor(System.Int32,System.String,System.String,System.String,System.String,System.String,System.Int32)">
+            <summary>
+            Constructeur 1 de la classe Eleve
+            avec l'attribut id
+            </summary>
+            <param name="id"></param>
+            <param name="nom"></param>
+            <param name="prenom"></param>
+            <param name="tel"></param>
+            <param name="mail"></param>
+            <param name="adresse"></param>
+            <param name="bourse"></param>
+        </member>
+        <member name="M:CliLourdConservatoire.Model.Eleve.#ctor(System.String,System.String,System.String,System.String,System.String,System.Int32)">
+            <summary>
+            Constructeur 2 de la classe Eleve
+            sans l'attribut id
+            </summary>
+            <param name="nom"></param>
+            <param name="prenom"></param>
+            <param name="tel"></param>
+            <param name="mail"></param>
+            <param name="adresse"></param>
+            <param name="bourse"></param>
+        </member>
+        <member name="T:CliLourdConservatoire.Model.Employe">
+            <summary>
+            Classe Employe
+            </summary>
+        </member>
+        <member name="M:CliLourdConservatoire.Model.Employe.#ctor(System.Int32,System.String,System.String,System.String,System.String)">
+            <summary>
+            Constructeur de la classe Employe
+            </summary>
+            <param name="id"></param>
+            <param name="nom"></param>
+            <param name="prenom"></param>
+            <param name="login"></param>
+            <param name="password"></param>
+        </member>
+        <member name="T:CliLourdConservatoire.Model.Heure">
+            <summary>
+            Classe Heure
+            </summary>
+        </member>
+        <member name="M:CliLourdConservatoire.Model.Heure.#ctor(System.String)">
+            <summary>
+            Constructeur de la classe Heure
+            </summary>
+            <param name="tranche"></param>
+        </member>
+        <member name="T:CliLourdConservatoire.Model.Inscription">
+            <summary>
+            Classe Inscription
+            </summary>
+        </member>
+        <member name="M:CliLourdConservatoire.Model.Inscription.#ctor(System.Int32,System.Int32,System.Int32,System.DateTime)">
+            <summary>
+            Constructeur de la classe Inscription
+            prenant les 2 premiers attributs comme 'string'
+            </summary>
+            <param name="idProf"></param>
+            <param name="idEleve"></param>
+            <param name="numSeance"></param>
+            <param name="dateInscription"></param>
+        </member>
+        <member name="M:CliLourdConservatoire.Model.Inscription.#ctor(System.String,System.String,System.Int32,System.DateTime)">
+            <summary>
+            Constructeur de la classe Inscription
+            prenant les 2 premiers attributs comme 'int'
+            </summary>
+            <param name="prof"></param>
+            <param name="eleve"></param>
+            <param name="numSeance"></param>
+            <param name="dateInscription"></param>
+        </member>
+        <member name="T:CliLourdConservatoire.Model.Jours">
+            <summary>
+            Classe Jours
+            </summary>
+        </member>
+        <member name="M:CliLourdConservatoire.Model.Jours.#ctor(System.String)">
+            <summary>
+            Constructeur de la classe Jours
+            </summary>
+            <param name="jour"></param>
+        </member>
+        <member name="T:CliLourdConservatoire.Model.Payer">
+            <summary>
+            Classe Payer
+            </summary>
+        </member>
+        <member name="M:CliLourdConservatoire.Model.Payer.#ctor(System.Int32,System.Int32,System.Int32,System.String,System.DateTime,System.Int32)">
+            <summary>
+            Constructeur de la classe Payer
+            </summary>
+            <param name="idProf"></param>
+            <param name="idEleve"></param>
+            <param name="numSeance"></param>
+            <param name="libelle"></param>
+            <param name="datePaiement"></param>
+            <param name="paye"></param>
+        </member>
+        <member name="M:CliLourdConservatoire.Model.Personne.#ctor(System.Int32,System.String,System.String,System.String,System.String,System.String)">
+            <summary>
+            Constructeur 1 de la classe Personne
+            avec l'attribut id
+            </summary>
+            <param name="id"></param>
+            <param name="nom"></param>
+            <param name="prenom"></param>
+            <param name="telephone"></param>
+            <param name="email"></param>
+            <param name="adresse"></param>
+        </member>
+        <member name="M:CliLourdConservatoire.Model.Personne.#ctor(System.String,System.String,System.String,System.String,System.String)">
+            <summary>
+            Constructeur 2 de la classe Personne
+            sans l'attribut id
+            </summary>
+            <param name="nom"></param>
+            <param name="prenom"></param>
+            <param name="telephone"></param>
+            <param name="email"></param>
+            <param name="adresse"></param>
+        </member>
+        <member name="T:CliLourdConservatoire.Model.Prof">
+            <summary>
+            Classe Prof
+            </summary>
+        </member>
+        <member name="M:CliLourdConservatoire.Model.Prof.#ctor(System.Int32,System.String,System.String,System.String,System.String,System.String,System.String,System.Double)">
+            <summary>
+            Constructeur Json de la classe Prof
+            </summary>
+            <param name="id"></param>
+            <param name="nom"></param>
+            <param name="prenom"></param>
+            <param name="tel"></param>
+            <param name="mail"></param>
+            <param name="adresse"></param>
+            <param name="instrument"></param>
+            <param name="salaire"></param>
+        </member>
+        <member name="M:CliLourdConservatoire.Model.Prof.#ctor(System.Int32,System.String,System.String,System.String,System.String,System.String,System.String,System.Double,System.String,System.String)">
+            <summary>
+            Constructeur 2 de la classe Prof
+            avec l'attribut id
+            </summary>
+            <param name="id"></param>
+            <param name="nom"></param>
+            <param name="prenom"></param>
+            <param name="tel"></param>
+            <param name="mail"></param>
+            <param name="adresse"></param>
+            <param name="instrument"></param>
+            <param name="salaire"></param>
+            <param name="login"></param>
+            <param name="mdp"></param>
+        </member>
+        <member name="M:CliLourdConservatoire.Model.Prof.#ctor(System.String,System.String,System.String,System.String,System.String,System.String,System.Double,System.String,System.String)">
+            <summary>
+            Constructeur 3 de la classe Prof
+            sans l'attribut id
+            </summary>
+            <param name="nom"></param>
+            <param name="prenom"></param>
+            <param name="tel"></param>
+            <param name="mail"></param>
+            <param name="adresse"></param>
+            <param name="instrument"></param>
+            <param name="salaire"></param>
+            <param name="login"></param>
+            <param name="mdp"></param>
+        </member>
+        <member name="T:CliLourdConservatoire.Model.Seance">
+            <summary>
+            Classe Seance
+            </summary>
+        </member>
+        <member name="M:CliLourdConservatoire.Model.Seance.#ctor(System.Int32,System.Int32,System.String,System.String,System.Int32,System.Int32)">
+            <summary>
+            Constructeur de la classe Seance
+            </summary>
+            <param name="idProf"></param>
+            <param name="numSceance"></param>
+            <param name="tranche"></param>
+            <param name="jour"></param>
+            <param name="niveau"></param>
+            <param name="capacite"></param>
+        </member>
+        <member name="T:CliLourdConservatoire.Model.Trimestre">
+            <summary>
+            Classe Trimestre
+            </summary>
+        </member>
+        <member name="M:CliLourdConservatoire.Model.Trimestre.#ctor(System.String,System.DateTime)">
+            <summary>
+            Constructeur de la classe Trimestre
+            </summary>
+            <param name="libelle"></param>
+            <param name="dateFin"></param>
+        </member>
+        <member name="M:CliLourdConservatoire.Model.Trimestre.compareDates(System.DateTime)">
+            <summary>
+            methode permettant de comparer une date donnée avec la date du jour 
+            selon quelques critères de dates des trimestres.
+            la date à donner est la date de fin d'un trimestre.
+            </summary>
+            <param name="d1"></param>
+            <returns></returns>
+        </member>
+        <member name="M:CliLourdConservatoire.FormAjoutProf.#ctor">
+            <summary>
+            Constructeur du formulaire d'ajout d'un professeur
+            </summary>
+        </member>
+        <member name="M:CliLourdConservatoire.FormAjoutProf.btnAbandonner_Click(System.Object,System.EventArgs)">
+            <summary>
+            btn abandonner fermant le formulaire
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:CliLourdConservatoire.FormAjoutProf.btnAjouter_Click(System.Object,System.EventArgs)">
+            <summary>
+            btn permettant de valider l'ajout
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="F:CliLourdConservatoire.FormAjoutProf.components">
+            <summary>
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:CliLourdConservatoire.FormAjoutProf.Dispose(System.Boolean)">
+            <summary>
+            Clean up any resources being used.
+            </summary>
+            <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        </member>
+        <member name="M:CliLourdConservatoire.FormAjoutProf.InitializeComponent">
+            <summary>
+            Required method for Designer support - do not modify
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="M:CliLourdConservatoire.View.FormAjoutSeance.#ctor(CliLourdConservatoire.Model.Prof)">
+            <summary>
+            constructeur du formulaire d'ajout d'une séance
+            </summary>
+            <param name="p"></param>
+        </member>
+        <member name="M:CliLourdConservatoire.View.FormAjoutSeance.cbJour_SelectedIndexChanged(System.Object,System.EventArgs)">
+            <summary>
+            actions à la séléction d'un jour
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:CliLourdConservatoire.View.FormAjoutSeance.btnAjout_Click(System.Object,System.EventArgs)">
+            <summary>
+            btn validant l'ajout de la séance
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="F:CliLourdConservatoire.View.FormAjoutSeance.components">
+            <summary>
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:CliLourdConservatoire.View.FormAjoutSeance.Dispose(System.Boolean)">
+            <summary>
+            Clean up any resources being used.
+            </summary>
+            <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        </member>
+        <member name="M:CliLourdConservatoire.View.FormAjoutSeance.InitializeComponent">
+            <summary>
+            Required method for Designer support - do not modify
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="M:CliLourdConservatoire.FormPaiements.#ctor">
+            <summary>
+            constructeur du formulaire de paiements
+            </summary>
+        </member>
+        <member name="M:CliLourdConservatoire.FormPaiements.lbInscription_SelectedIndexChanged(System.Object,System.EventArgs)">
+            <summary>
+            actions après la séléction d'une inscription
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:CliLourdConservatoire.FormPaiements.btnValiderT1_Click(System.Object,System.EventArgs)">
+            <summary>
+            pour le trimestre 1
+            btn de validation du paiement du trimestre 1
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:CliLourdConservatoire.FormPaiements.btnValiderT2_Click(System.Object,System.EventArgs)">
+            <summary>
+            pour le trimestre 2
+            btn de validation du paiement du trimestre 2
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:CliLourdConservatoire.FormPaiements.btnValiderT3_Click(System.Object,System.EventArgs)">
+            <summary>
+            pour le trimestre 3
+            btn de validation du paiement du trimestre 3
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="F:CliLourdConservatoire.FormPaiements.components">
+            <summary>
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:CliLourdConservatoire.FormPaiements.Dispose(System.Boolean)">
+            <summary>
+            Clean up any resources being used.
+            </summary>
+            <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        </member>
+        <member name="M:CliLourdConservatoire.FormPaiements.InitializeComponent">
+            <summary>
+            Required method for Designer support - do not modify
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="M:CliLourdConservatoire.MainForm.#ctor(CliLourdConservatoire.FormAuthentification)">
+            <summary>
+            Constructeur du formulaire principal
+            </summary>
+            <param name="form"></param>
+        </member>
+        <member name="M:CliLourdConservatoire.MainForm.lbProf_DoubleClick(System.Object,System.EventArgs)">
+            <summary>
+            actions après un double clique sur un prof
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:CliLourdConservatoire.MainForm.lbCours_DoubleClick(System.Object,System.EventArgs)">
+            <summary>
+            actions après un double clique sur une séance
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:CliLourdConservatoire.MainForm.lbCours_SelectedIndexChanged(System.Object,System.EventArgs)">
+            <summary>
+            actions après un clique sur un autre cours
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:CliLourdConservatoire.MainForm.supprimerProfToolStripMenuItem_Click(System.Object,System.EventArgs)">
+            <summary>
+            btn supprimer un professeur
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:CliLourdConservatoire.MainForm.ajoutProfesseurToolStripMenuItem_Click(System.Object,System.EventArgs)">
+            <summary>
+            btn ajouter un professeur
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:CliLourdConservatoire.MainForm.afficherListeProf">
+            <summary>
+            fonction gérant l'affichage des professeurs
+            </summary>
+        </member>
+        <member name="M:CliLourdConservatoire.MainForm.afficherListeSeance">
+            <summary>
+            fonction gérant l'affichage des séances
+            </summary>
+        </member>
+        <member name="M:CliLourdConservatoire.MainForm.gestionDesPaimentsToolStripMenuItem_Click(System.Object,System.EventArgs)">
+            <summary>
+            btn ouvrant le formulaire de gestion des paiements
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:CliLourdConservatoire.MainForm.modifierDateCoursToolStripMenuItem_Click(System.Object,System.EventArgs)">
+            <summary>
+            btn ouvrant le formulaire de modification d'un cours
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:CliLourdConservatoire.MainForm.ajouterUnCoursToolStripMenuItem_Click(System.Object,System.EventArgs)">
+            <summary>
+            btn ouvrant le formulaire d'ajout d'un nouveau cours
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:CliLourdConservatoire.MainForm.button1_Click(System.Object,System.EventArgs)">
+            <summary>
+            btn fermant et arrêtant l'application
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:CliLourdConservatoire.MainForm.lbProf_SelectedIndexChanged(System.Object,System.EventArgs)">
+            <summary>
+            actions après séléction d'un autre professeur
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="F:CliLourdConservatoire.MainForm.components">
+            <summary>
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:CliLourdConservatoire.MainForm.Dispose(System.Boolean)">
+            <summary>
+            Clean up any resources being used.
+            </summary>
+            <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        </member>
+        <member name="M:CliLourdConservatoire.MainForm.InitializeComponent">
+            <summary>
+            Required method for Designer support - do not modify
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="M:CliLourdConservatoire.FormAuthentification.#ctor">
+            <summary>
+            Constructeur du formulaire d'authentification
+            </summary>
+        </member>
+        <member name="M:CliLourdConservatoire.FormAuthentification.btnAuthentification_Click(System.Object,System.EventArgs)">
+            <summary>
+            Bouton appelant la méthode de gestion d'authentification
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="F:CliLourdConservatoire.FormAuthentification.components">
+            <summary>
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:CliLourdConservatoire.FormAuthentification.Dispose(System.Boolean)">
+            <summary>
+            Clean up any resources being used.
+            </summary>
+            <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        </member>
+        <member name="M:CliLourdConservatoire.FormAuthentification.InitializeComponent">
+            <summary>
+            Required method for Designer support - do not modify
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="M:CliLourdConservatoire.FormModifCours.#ctor(CliLourdConservatoire.Model.Seance)">
+            <summary>
+            constructeur du formulaire de modification de cours
+            </summary>
+            <param name="seance"></param>
+        </member>
+        <member name="M:CliLourdConservatoire.FormModifCours.cbJour_SelectedIndexChanged(System.Object,System.EventArgs)">
+            <summary>
+            actions au changement du jour séléctionné
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:CliLourdConservatoire.FormModifCours.btnValider_Click(System.Object,System.EventArgs)">
+            <summary>
+            btn validant la modification
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="F:CliLourdConservatoire.FormModifCours.components">
+            <summary>
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:CliLourdConservatoire.FormModifCours.Dispose(System.Boolean)">
+            <summary>
+            Clean up any resources being used.
+            </summary>
+            <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        </member>
+        <member name="M:CliLourdConservatoire.FormModifCours.InitializeComponent">
+            <summary>
+            Required method for Designer support - do not modify
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="M:CliLourdConservatoire.Program.Main">
+            <summary>
+            The main entry point for the application.
+            </summary>
+        </member>
+        <member name="T:CliLourdConservatoire.Properties.Resources">
+            <summary>
+              A strongly-typed resource class, for looking up localized strings, etc.
+            </summary>
+        </member>
+        <member name="P:CliLourdConservatoire.Properties.Resources.ResourceManager">
+            <summary>
+              Returns the cached ResourceManager instance used by this class.
+            </summary>
+        </member>
+        <member name="P:CliLourdConservatoire.Properties.Resources.Culture">
+            <summary>
+              Overrides the current thread's CurrentUICulture property for all
+              resource lookups using this strongly typed resource class.
+            </summary>
+        </member>
+        <member name="P:CliLourdConservatoire.Properties.Resources.logoMPT">
+            <summary>
+              Looks up a localized resource of type System.Drawing.Bitmap.
+            </summary>
+        </member>
+    </members>
+</doc>

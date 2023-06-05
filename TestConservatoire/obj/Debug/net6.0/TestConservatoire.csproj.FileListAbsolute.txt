@@ -133,3 +133,4 @@ C:\Users\hinda\OneDrive\Documents\CliLourdConservatoire\TestConservatoire\bin\De
 C:\Users\hinda\OneDrive\Documents\CliLourdConservatoire\TestConservatoire\bin\Debug\net6.0\runtimes\win\lib\net6.0\System.Drawing.Common.dll
 C:\Users\hinda\OneDrive\Documents\CliLourdConservatoire\TestConservatoire\bin\Debug\net6.0\runtimes\win\lib\net6.0\System.Windows.Extensions.dll
 C:\Users\hinda\OneDrive\Documents\CliLourdConservatoire\TestConservatoire\obj\Debug\net6.0\TestConservatoire.csproj.ResolveComReference.cache
+C:\Users\hinda\OneDrive\Documents\CliLourdConservatoire\TestConservatoire\bin\Debug\net6.0\CliLourdConservatoire.xml
