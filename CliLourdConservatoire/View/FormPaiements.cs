@@ -30,15 +30,21 @@ namespace CliLourdConservatoire
         private Trimestre trimestre1;
         private Trimestre trimestre2;
         private Trimestre trimestre3;
+
+        /// <summary>
+        /// constructeur du formulaire de paiements
+        /// </summary>
         public FormPaiements()
         {
             InitializeComponent();
+            //paramétrage de la taille de la fenêtre
             this.Size = new Size(900, 400);
 
             trimestre1 = TrimestreController.getByTrimestre("trimestre1");
             trimestre2 = TrimestreController.getByTrimestre("trimestre2");
             trimestre3 = TrimestreController.getByTrimestre("trimestre3");
 
+            //récupérer toutes les inscriptions
             listeGetAll = InscriptionController.getAll();
             listeGetAllAffichage = InscriptionController.getAllAffichage();
             lbInscription.DataSource = listeGetAllAffichage;
@@ -46,6 +52,11 @@ namespace CliLourdConservatoire
 
         }
         
+        /// <summary>
+        /// actions après la séléction d'une inscription
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void lbInscription_SelectedIndexChanged(object sender, EventArgs e)
         {
             try
@@ -53,15 +64,17 @@ namespace CliLourdConservatoire
                 int index = lbInscription.SelectedIndex;
                 selectedInscription = listeGetAll[index];
 
-
+                //récupération des paiements pour l'inscription séléctionnée
                 paieT1 = PayerController.getByInscription_Trimestre(selectedInscription, "trimestre1");
                 paieT2 = PayerController.getByInscription_Trimestre(selectedInscription, "trimestre2");
                 paieT3 = PayerController.getByInscription_Trimestre(selectedInscription, "trimestre3");
 
+                //vérifier qu'il y a 3 paiements par inscription
                 if ((paieT1 == null) || (paieT2 == null) || (paieT3 == null)){
                     throw new Exception();
                 }
 
+                //affichage de l'état du paiement par trimestre
                 if (paieT1.DatePaiement.Year != 0001)
                 {
                     btnPayeT1.BackColor = Color.Green;
@@ -130,6 +143,12 @@ namespace CliLourdConservatoire
             }
         }
 
+        /// <summary>
+        /// pour le trimestre 1
+        /// btn de validation du paiement du trimestre 1
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void btnValiderT1_Click(object sender, EventArgs e)
         {
             bool res = Trimestre.compareDates(trimestre1.DateFin);
@@ -147,6 +166,12 @@ namespace CliLourdConservatoire
             lbInscription.SetSelected(index, true);
         }
 
+        /// <summary>
+        /// pour le trimestre 2
+        /// btn de validation du paiement du trimestre 2
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void btnValiderT2_Click(object sender, EventArgs e)
         {
             bool res = Trimestre.compareDates(trimestre2.DateFin);
@@ -164,6 +189,12 @@ namespace CliLourdConservatoire
             lbInscription.SetSelected(index, true);
         }
 
+        /// <summary>
+        /// pour le trimestre 3
+        /// btn de validation du paiement du trimestre 3
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void btnValiderT3_Click(object sender, EventArgs e)
         {
             bool res = Trimestre.compareDates(trimestre3.DateFin);

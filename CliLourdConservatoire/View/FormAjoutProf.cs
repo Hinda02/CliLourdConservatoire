@@ -17,6 +17,9 @@ namespace CliLourdConservatoire
     public partial class FormAjoutProf : Form
     {
         List<Instrument> instrumentList;
+        /// <summary>
+        /// Constructeur du formulaire d'ajout d'un professeur
+        /// </summary>
         public FormAjoutProf()
         {
             InitializeComponent();
@@ -27,6 +30,11 @@ namespace CliLourdConservatoire
 
         }
 
+        /// <summary>
+        /// btn abandonner fermant le formulaire
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void btnAbandonner_Click(object sender, EventArgs e)
         {   
 
@@ -38,6 +46,11 @@ namespace CliLourdConservatoire
 
         }
 
+        /// <summary>
+        /// btn permettant de valider l'ajout
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void btnAjouter_Click(object sender, EventArgs e)
         {
             try

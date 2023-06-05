@@ -16,14 +16,20 @@ namespace CliLourdConservatoire.View
     {
         private Prof prof;
 
+        /// <summary>
+        /// constructeur du formulaire d'ajout d'une séance
+        /// </summary>
+        /// <param name="p"></param>
         public FormAjoutSeance(Prof p)
         {  
             InitializeComponent();
 
+            //récupération des données du prof séléctionné
             prof = p;
             tbMatiere.Text = prof.Instrument;
             tbProf.Text = prof.Identite;
 
+            //gestion du numéro de séance actuel du prof
             int numS = SeanceController.getLastNumSeance(prof.Id);
             if (numS != -1)
             {
@@ -42,12 +48,23 @@ namespace CliLourdConservatoire.View
 
         }
 
+        /// <summary>
+        /// actions à la séléction d'un jour
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void cbJour_SelectedIndexChanged(object sender, EventArgs e)
         {
+            //gestion des horaires à afficher selon le jour
             cbTranche.DataSource = HeureController.getByJour_Id(cbJour.Text, prof.Id);
             cbTranche.DisplayMember = "Tranche";
         }
 
+        /// <summary>
+        /// btn validant l'ajout de la séance
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void btnAjout_Click(object sender, EventArgs e)
         {
             try { 

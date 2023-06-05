@@ -16,10 +16,16 @@ namespace CliLourdConservatoire
     {
 
         private Seance s;
+
+        /// <summary>
+        /// constructeur du formulaire de modification de cours
+        /// </summary>
+        /// <param name="seance"></param>
         public FormModifCours(Seance seance)
         {
 
             InitializeComponent();
+            //affichage des données actuelles de la séance séléctionnée
             s = seance;
             cbJour.DataSource = JourController.getAll();
             cbJour.DisplayMember = "Jour";
@@ -38,15 +44,24 @@ namespace CliLourdConservatoire
         }
 
         
-
+        /// <summary>
+        /// actions au changement du jour séléctionné
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void cbJour_SelectedIndexChanged(object sender, EventArgs e)
         {
-
+            //gestion des tranches horaires possibles
             cbTranche.DataSource = HeureController.getByJour_Id(cbJour.Text, s.IdProf);
             cbTranche.DisplayMember = "Tranche";
             cbTranche.Text = s.Tranche;
         }
 
+        /// <summary>
+        /// btn validant la modification
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void btnValider_Click(object sender, EventArgs e)
         {
             s.Jour = cbJour.Text;
@@ -56,6 +71,7 @@ namespace CliLourdConservatoire
             this.Close();
         }
 
+        //btn annulant la modification et fermant le formulaire
         private void btnAnnuler_Click(object sender, EventArgs e)
         {
             DialogResult result = MessageBox.Show("Voulez vous annuler?", "Alerte", MessageBoxButtons.YesNo);

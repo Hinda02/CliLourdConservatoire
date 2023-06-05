@@ -26,48 +26,79 @@ namespace CliLourdConservatoire
         private Prof selectedProf;
         private Seance selectedSeance;
         private FormAuthentification f;
+
+        /// <summary>
+        /// Constructeur du formulaire principal
+        /// </summary>
+        /// <param name="form"></param>
         public MainForm(FormAuthentification form)
         {
 
             InitializeComponent();
 
+            //paramétrage de la taille de la fenêtre
             this.Size = new System.Drawing.Size(750, 750);
             
+            //affichage de la liste des professeurs
             afficherListeProf();
+            //cacher le formulaire d'authentification
             f = form;
             f.Hide();
         }
 
+        /// <summary>
+        /// actions après un double clique sur un prof
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void lbProf_DoubleClick(object sender, EventArgs e)
         {
             selectedProf = (Prof)lbProf.SelectedItem;
 
+            //afficher la liste des séance du professeur séléctionné
             afficherListeSeance();
         }
 
+        /// <summary>
+        /// actions après un double clique sur une séance
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void lbCours_DoubleClick(object sender, EventArgs e)
         {
             List<Inscription> inscriptions = InscriptionController.getBySeance(selectedSeance);
 
+            //afficher la liste des élèves inscrits au cours séléctionné
             listeEleve = EleveController.getByInscrptions(inscriptions);
             lbInscrit.DataSource = listeEleve;
             lbInscrit.DisplayMember = "Afficher";
         }
 
+        /// <summary>
+        /// actions après un clique sur un autre cours
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void lbCours_SelectedIndexChanged(object sender, EventArgs e)
         {
             selectedSeance = (Seance)lbCours.SelectedItem;
             lbInscrit.DataSource = null;
         }
 
+        /// <summary>
+        /// btn supprimer un professeur
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void supprimerProfToolStripMenuItem_Click(object sender, EventArgs e)
         {
             try
             {
                 selectedProf = (Prof)lbProf.SelectedItem;
 
+                //effacer un professeur
                 ProfController.DeleteProf(selectedProf);
-
+                //réafficher la liste des profs
                 afficherListeProf();
             }
             catch (Exception)
@@ -81,18 +112,28 @@ namespace CliLourdConservatoire
             
         }
 
+        /// <summary>
+        /// btn ajouter un professeur
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void ajoutProfesseurToolStripMenuItem_Click(object sender, EventArgs e)
         {
+            //afficher le formulaire permettant l'insertion d'un nouveau prof
             FormAjoutProf form1 = new FormAjoutProf();
             form1.ShowDialog();
 
+            //réafficher la liste des profs
             afficherListeProf();
         }
 
+        /// <summary>
+        /// fonction gérant l'affichage des professeurs
+        /// </summary>
         private void afficherListeProf()
         {
 
-
+            //appel de l'API
             using (WebClient web = new WebClient())
             {
 
@@ -123,6 +164,9 @@ namespace CliLourdConservatoire
            
         }
 
+        /// <summary>
+        /// fonction gérant l'affichage des séances
+        /// </summary>
         private void afficherListeSeance()
         {
             listeSeance = SeanceController.getByIdProf(selectedProf.Id);
@@ -130,12 +174,22 @@ namespace CliLourdConservatoire
             lbCours.DisplayMember = "Afficher";
         }
 
+        /// <summary>
+        /// btn ouvrant le formulaire de gestion des paiements
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void gestionDesPaimentsToolStripMenuItem_Click(object sender, EventArgs e)
         {
             FormPaiements form2 = new FormPaiements();
             form2.ShowDialog();
         }
 
+        /// <summary>
+        /// btn ouvrant le formulaire de modification d'un cours
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void modifierDateCoursToolStripMenuItem_Click(object sender, EventArgs e)
         {
             try
@@ -163,6 +217,11 @@ namespace CliLourdConservatoire
             
         }
 
+        /// <summary>
+        /// btn ouvrant le formulaire d'ajout d'un nouveau cours
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void ajouterUnCoursToolStripMenuItem_Click(object sender, EventArgs e)
         {
             selectedProf = (Prof)lbProf.SelectedItem;
@@ -172,12 +231,22 @@ namespace CliLourdConservatoire
             afficherListeSeance();
         }
 
+        /// <summary>
+        /// btn fermant et arrêtant l'application
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void button1_Click(object sender, EventArgs e)
         {
             f.Close();
             System.Windows.Forms.Application.ExitThread();
         }
 
+        /// <summary>
+        /// actions après séléction d'un autre professeur
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void lbProf_SelectedIndexChanged(object sender, EventArgs e)
         {
             lbCours.DataSource = null;

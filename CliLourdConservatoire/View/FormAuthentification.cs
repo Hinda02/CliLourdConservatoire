@@ -14,11 +14,19 @@ namespace CliLourdConservatoire
 {
     public partial class FormAuthentification : Form
     {
+        /// <summary>
+        /// Constructeur du formulaire d'authentification
+        /// </summary>
         public FormAuthentification()
         {
             InitializeComponent();
         }
 
+        /// <summary>
+        /// Bouton appelant la méthode de gestion d'authentification
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void btnAuthentification_Click(object sender, EventArgs e)
         {
             string identifiant = tbLogin.Text;
